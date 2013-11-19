@@ -6,15 +6,18 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 14:19:30 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/19 15:40:08 by aaubin           ###   ########.fr       */
+/*   Updated: 2013/11/19 18:05:00 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef __FT_FT_H__
 # define __FT_FT_H__
+
+#include <stdlib.h>
 #include <string.h>
 
-void	*memset(void *b, int c, size_t len);
+void*	ft_memset(void *b, int c, size_t len);
+/*
 void	bzero(void *s, size_t n);
 void	*memcpy(void *restrict s1, const void *restrict s2, size_t n);
 void	*memccpy(void *restrict s1, const void *restrict s2, int c, size_t n);
@@ -45,5 +48,5 @@ int		isascii(int c);
 int		isprint(int c);
 int		toupper(int c);
 int		tolower(int c);
-
+*/
 #endif

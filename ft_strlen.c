@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-<<<<<<< HEAD
-/*   Created: 2013/11/20 03:56:23 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/20 03:56:54 by aaubin           ###   ########.fr       */
-=======
-/*   Created: 2013/11/20 03:22:01 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/20 04:39:08 by aaubin           ###   ########.fr       */
->>>>>>> tests
+/*   Created: 2013/11/20 05:04:12 by aaubin            #+#    #+#             */
+/*   Updated: 2013/11/20 05:17:42 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *s1, const void *s2, size_t n)
+size_t	ft_strlen(const char *s)
 {
-	void	*ret;
-	char	*reader;
+	size_t		len;
 
-	reader = (char *) s2;
-		ret = s1;
-		while ( n-- )
-		{
-			*(char *)s1 = *reader;
-			reader = (char *)s2 + 1;
-			s1 = (char *)s1 + 1;
-		}
-	return (ret);
+	len = 0;
+	while ('\0' != s[len])
+	{
+		len ++;
+	}
+	return (len);
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 03:22:01 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/20 03:48:50 by aaubin           ###   ########.fr       */
+/*   Created: 2013/11/20 03:56:23 by aaubin            #+#    #+#             */
+/*   Updated: 2013/11/20 03:56:54 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,18 @@
 
 void	*ft_memcpy(void *restrict s1, const void *restrict s2, size_t n);
 {
+	char	*sve;
 	char	*t;
 
+	sve = s1;
 	if ( n )
 	{
-		t = s;
+		t = s2;
 		while ( n )
 		{
-			*t ++ = 0;
+			*s1 ++ = t ++;
 			n --;
 		}
 	}
+	return (sve);
 }

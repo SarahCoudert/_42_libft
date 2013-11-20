@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 06:05:09 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/20 06:28:53 by aaubin           ###   ########.fr       */
+/*   Created: 2013/11/20 06:31:27 by aaubin            #+#    #+#             */
+/*   Updated: 2013/11/20 06:49:12 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "libft.h"
 
-char	*ft_strcpy(char *s1, const char *s2)
+char	*ft_strncpy(char *s1, const char *s2, size_t n)
 {
 	size_t			len;
 	unsigned int	cmpt;
@@ -24,7 +25,7 @@ char	*ft_strcpy(char *s1, const char *s2)
 
 	while (cmpt <= len)
 	{
-		fill[cmpt] = s2[cmpt];
+		fill[cmpt] = (cmpt > n ? '\0' : s2[cmpt]);
 		cmpt++;
 	}
 	return (s1);

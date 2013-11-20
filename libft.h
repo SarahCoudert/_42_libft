@@ -6,7 +6,7 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 14:19:30 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/20 07:02:19 by aaubin           ###   ########.fr       */
+/*   Updated: 2013/11/20 08:33:52 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ char	*ft_strdup(const char *s1);
 char	*ft_strcpy(char *s1, const char *s2);
 char	*ft_strncpy(char *s1, const char *s2, size_t n);
 char	*ft_strcat(char *s1, const char *s2);
+char	*ft_strncat(char *s1, const char *s2, size_t n);
 
 
 /*
@@ -33,7 +34,6 @@ void	*memmove(void *s1, const void *s2, size_t n);
 void	*memchr(const void *s, int c, size_t n);
 int		memcmp(const void *s1, const void *s2, size_t n);
 
-char	*strncat(char *restrict s1, const char *restrict s2, size_t n);
 size_t	strlcat(char * restrict dst, const char * restrict src, size_t size);
 char	*strchr(const char *s, int c);
 char	*strrchr(const char *s, int c);

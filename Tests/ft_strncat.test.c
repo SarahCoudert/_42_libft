@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.test.c                                  :+:      :+:    :+:   */
+/*   ft_strncat.test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 06:31:41 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/20 08:47:17 by aaubin           ###   ########.fr       */
+/*   Created: 2013/11/20 08:36:28 by aaubin            #+#    #+#             */
+/*   Updated: 2013/11/20 09:03:45 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../libTest/libft_test.h"
 #include "libft.h"
 
 #include <stdio.h>
 
-void	ft_test_strcat(char *mem_ft, char *mem_org, char *cpy_ft, int *r)
+void	ft_test_strncat(char *mem_ft, char *mem_org, char *cpy_ft, int c, int *r)
 {
-	char *res_org = strcat(mem_org, cpy_ft);
-	char *res_ft = ft_strcat(mem_ft, cpy_ft);
+	char *res_org = strncat(mem_org, cpy_ft, c);
+	char *res_ft = ft_strncat(mem_ft, cpy_ft, c);
 
-	/* printf("strcat(%s,%s,%s) => [%s][%s]\n",mem_ft, mem_org, cpy_ft, res_ft, res_org); */
+	/* printf("strncat(%s,%s,%s, %i) => [%s][%s]\n",mem_ft, mem_org, cpy_ft, c, res_ft, res_org); */
 	if (strcmp(res_org, res_ft) == 0)
 	{
 		/* printf("\t\t\033[1;32mOK.\033[0;39m \n"); */
@@ -36,38 +35,30 @@ void	ft_test_strcat(char *mem_ft, char *mem_org, char *cpy_ft, int *r)
 	}
 }
 
-void	ft_test_with_all_values(void (*ptrfonction)(char *, char *, char *, int*), int *r)
+void	ft_test_with_all_values(void (*ptrfonction)(char *, char *, char *, int, int*), int *r)
 {
-	int i;
+	char chaine[200] = "Bonjour ";
+	char chaine_org[200] = "Bonjour ";
+	char chaine_mod[20] = "Andre";
 
-	i = 4;
-	while (i < 5)
-	{
-		/*chaine = malloc(sizeof(char) * i*2);
-		chaine_org = malloc(sizeof(char) * i*2);
-		chaine_mod = malloc(sizeof(char) * i/2);
-		*/
-		char chaine[200] = "Bonjour ";
-		char chaine_org[200] = "Bonjour ";
-		char chaine_mod[6] = "Andre";
-		
-		(*ptrfonction)(chaine, chaine_org, chaine_mod, r);
-		i++;
-	}
+	(*ptrfonction)(chaine, chaine_org, chaine_mod, 3, r);
+	(*ptrfonction)(chaine, chaine_org, chaine_mod, 4, r);
+	(*ptrfonction)(chaine, chaine_org, chaine_mod, 5, r);
+	(*ptrfonction)(chaine, chaine_org, chaine_mod, 0, r);
 }
 
 int	main(int argc, char *argv[])
 {
 	int	*r;
-	void (*ptrfonction)(char*, char *, char*, int*);
+	void (*ptrfonction)(char*, char *, char*, int, int*);
 
-	r = ft_init_tests("ft_strcat");	
-	ptrfonction = &ft_test_strcat;
+	r = ft_init_tests("ft_strncat");	
+	ptrfonction = &ft_test_strncat;
 
 	ft_test_with_all_values(ptrfonction, r);
 
 	printf("\n");
-	ft_end_tests("ft_strcat", r);
+	ft_end_tests("ft_strncat", r);
 
 	return 0;
 }

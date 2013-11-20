@@ -6,7 +6,7 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 14:19:30 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/20 09:16:33 by aaubin           ###   ########.fr       */
+/*   Updated: 2013/11/20 19:52:58 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strcpy(char *s1, const char *s2);
 char	*ft_strncpy(char *s1, const char *s2, size_t n);
 char	*ft_strcat(char *s1, const char *s2);
 char	*ft_strncat(char *s1, const char *s2, size_t n);
-size_t	strlcat(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
 
 /*

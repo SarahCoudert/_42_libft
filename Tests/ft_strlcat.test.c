@@ -6,7 +6,7 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 09:14:50 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/20 09:32:04 by aaubin           ###   ########.fr       */
+/*   Updated: 2013/11/20 20:30:09 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,22 +18,22 @@
 void	ft_test_strlcat(char *mem_ft, char *mem_org, char *cpy_ft, int c, int *r)
 {
 	printf("before:  mem_org = '%s', cpy_ft = '%s', c = '%i'\n", mem_org, cpy_ft, c);
-	int *res_org = strlcat(mem_org, cpy_ft, c);
-	//char *res_ft = ft_strlcat(mem_ft, cpy_ft, c);
+	int res_org = strlcat(mem_org, cpy_ft, c);
+	int res_ft = ft_strlcat(mem_ft, cpy_ft, c);
 
 	printf("strlcat(%s,%s, %i) => [%i]\n",mem_org, cpy_ft, c, res_org);
-/*	if (strcmp(res_org, res_ft) == 0)
+	printf("ft_strlcat(%s,%s, %i) => [%i]\n",mem_ft, cpy_ft, c, res_ft);
+	if (res_org == res_ft)
 	{
-		/* printf("\t\t\033[1;32mOK.\033[0;39m \n"); *//*
 		ft_digest_results(r, 1);
 	}
 	else
 	{
 		printf("\t\t\033[1;31mERROR\033[0;39m");
-		printf("\n[actual](%s) =! [expected](%s)\n", res_ft, res_org);
-		printf("\n=================================================================\n");
+		/*printf("\n[actual](%s) =! [expected](%s)\n", res_ft, res_org);
+		printf("\n=================================================================\n");*/
 		ft_digest_results(r, 0);
-	}*/
+	}
 }
 
 void	ft_test_with_all_values(void (*ptrfonction)(char *, char *, char *, int, int*), int *r)

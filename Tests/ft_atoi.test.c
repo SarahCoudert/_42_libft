@@ -6,7 +6,7 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 23:46:37 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/20 23:46:40 by aaubin           ###   ########.fr       */
+/*   Updated: 2013/11/21 00:29:27 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,28 +19,18 @@ int	main(int argc, char *argv[])
 {
 	int	*r;
 
-	r = ft_init_tests("ft_strnstr");	
+	r = ft_init_tests("ft_atoi");	
 
-	char *a = "Bonjour tout le monde !";
-	char *b = ft_strnstr(a, "tout", 13);
-	char *c = strnstr(a, "tout", 13);
-	printf("expected: [%s]\tresult:[%s]\n",c,b);
-	if ( b && c )
-	{
-		if ( strcmp(b, c) == 0 )
-			ft_digest_results(r, 1);
-		else
-			ft_digest_results(r, 0);
-	}
+	char	*a = "++3";
+	int		b = ft_atoi(a);
+	int		c = atoi(a);
+	printf("expected: [%i]\tresult:[%i]\n",c,b);
+	if ( b == c )
+		ft_digest_results(r, 1);
 	else
-	{
-		if ( b == c )
-			ft_digest_results(r, 1);
-		else
-			ft_digest_results(r, 0);
-	}
+		ft_digest_results(r, 0);
 	printf("\n");
-	ft_end_tests("ft_strnstr", r);
+	ft_end_tests("ft_atoi", r);
 
 	return 0;
 }

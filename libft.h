@@ -6,7 +6,7 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 14:19:30 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/19 18:05:00 by aaubin           ###   ########.fr       */
+/*   Updated: 2013/11/20 02:50:41 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 #include <string.h>
 
 void*	ft_memset(void *b, int c, size_t len);
+void	ft_bzero(void *s, size_t n);
 /*
-void	bzero(void *s, size_t n);
 void	*memcpy(void *restrict s1, const void *restrict s2, size_t n);
 void	*memccpy(void *restrict s1, const void *restrict s2, int c, size_t n);
 void	*memmove(void *s1, const void *s2, size_t n);

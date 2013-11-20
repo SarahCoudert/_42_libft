@@ -6,7 +6,7 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 14:19:30 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/20 05:05:22 by aaubin           ###   ########.fr       */
+/*   Updated: 2013/11/20 05:25:49 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *s1, const void *s2, size_t n);
 
 size_t	ft_strlen(const char *s);
+char	*ft_strdup(const char *s1);
 
 
 /*
@@ -29,7 +30,6 @@ void	*memmove(void *s1, const void *s2, size_t n);
 void	*memchr(const void *s, int c, size_t n);
 int		memcmp(const void *s1, const void *s2, size_t n);
 
-char	*strdup(const char *s1);
 char	*stpcpy(char *s1, const char *s2);
 char	*strncpy(char *restrict s1, const char *restrict s2, size_t n);
 char	*strcat(char *restrict s1, const char *restrict s2);

@@ -6,15 +6,15 @@
 #    By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/20 02:17:09 by aaubin            #+#    #+#              #
-#    Updated: 2013/11/20 02:55:56 by aaubin           ###   ########.fr        #
+#    Updated: 2013/11/20 04:29:53 by aaubin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC=gcc
-CFLAGS=-Wall -Werror -Wextra
+CFLAGS=-Wall -Werror -Wextra -g
 LDFLAGS=
 NAME=libft.a
-SRC=ft_memset.c ft_bzero.c
+SRC=ft_memset.c ft_bzero.c ft_memcpy.c
 NOM=$(basename $(SRC))
 OBJ=$(addsuffix .o, $(NOM))
 

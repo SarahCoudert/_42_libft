@@ -6,26 +6,24 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 03:22:01 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/20 03:54:29 by aaubin           ###   ########.fr       */
+/*   Updated: 2013/11/20 04:39:08 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict s1, const void *restrict s2, size_t n);
+void	*ft_memcpy(void *s1, const void *s2, size_t n)
 {
-	char	*sve;
-	char	*t;
+	void	*ret;
+	char	*reader;
 
-	sve = s1;
-	if ( n )
-	{
-		t = s2;
-		while ( n )
+	reader = (char *) s2;
+		ret = s1;
+		while ( n-- )
 		{
-			*s1 ++ = t ++;
-			n --;
+			*(char *)s1 = *reader;
+			reader = (char *)s2 + 1;
+			s1 = (char *)s1 + 1;
 		}
-	}
-	return (sve);
+	return (ret);
 }

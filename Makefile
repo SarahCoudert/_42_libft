@@ -6,7 +6,7 @@
 #    By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/20 02:17:09 by aaubin            #+#    #+#              #
-#    Updated: 2013/11/20 09:16:05 by aaubin           ###   ########.fr        #
+#    Updated: 2013/11/20 20:51:53 by aaubin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,18 @@ CC=gcc
 CFLAGS=-Wall -Werror -Wextra -g
 LDFLAGS=
 NAME=libft.a
-SRC=ft_memset.c ft_bzero.c ft_memcpy.c ft_strlen.c ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strcat.c ft_strncat.c ft_strlcat.c
+SRC=ft_memset.c\
+	ft_bzero.c\
+	ft_memcpy.c\
+	ft_strlen.c\
+	ft_strdup.c\
+	ft_strcpy.c\
+	ft_strncpy.c\
+	ft_strcat.c\
+	ft_strncat.c\
+	ft_strlcat.c\
+	ft_strchr.c\
+	ft_strrchr.c
 NOM=$(basename $(SRC))
 OBJ=$(addsuffix .o, $(NOM))
 

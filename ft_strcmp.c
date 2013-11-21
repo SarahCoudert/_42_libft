@@ -16,17 +16,10 @@ int		ft_strcmp(const char *s1, const char *s2)
 {
 	int		diff;
 	int		counter;
-	int		stop;
 
 	diff = 0;
-	stop = 0;
 	counter = 0;
-	while (s1[counter] != '\0' && !stop)
-	{
-		diff += (s1[counter] - s2[counter]);
-		if (s2[counter] != s1[counter])
-			stop = 1;
+	while (s1[counter] == s2[counter] && s1[counter] != '\0')
 		counter++;
-	}
-	return (diff);
+	return ((s1[counter] - s2[counter]));
 }

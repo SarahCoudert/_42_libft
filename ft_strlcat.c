@@ -10,52 +10,39 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-/*
 size_t		ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	dst_len;
-	size_t	src_len;
-	size_t	i;
+	char *dest_copy;
+	const char *src_copy;
+	size_t counter;
+	size_t dest_len;
 
-	dst_len = ft_strlen(dst);
-	src_len = ft_strlen(src);
-	i = 0;
-	while (src_len <= size && i < size && src[i] != '\0')
+	dest_copy = dst;
+	src_copy = src;
+	counter = size;
+	while (*dest_copy != '\0' && counter != 0)
 	{
-		dst[dst_len + i] = src[i];
-		i++;
+	counter--;
+		dest_copy++;
 	}
-	dst[dst_len + i] = '\0';
-	return dst_len;
-}
-*/
-
-size_t		ft_strlcat(char *dst, const char *src, size_t size)
-{
-
-	unsigned int    i;
-	int             d;
-	int             re;
-
-	i = -1;
-	while (src[++i]);
-	re = i;
-	i = -1;
-	while (dst[++i]);
-	re += (i < size) ? i : size;
-	d = i;
-	size -= i;
-	while (src[d - i] && size > 0)
+	dest_len = dest_copy - dst;
+	counter = size - dest_len;
+	if (counter == 0)
+		return(strlen(src_copy) + dest_len);
+	while (*src_copy != '\0')
 	{
-		dst[d] = src[d - i];
-		size--;
-		d = d + 1;
+		if (counter != 1)
+		{
+			*dest_copy = *src_copy;
+			dest_copy++;
+			counter--;
+		}
+		src_copy++;
 	}
-	dst[d] = '\0';
-	return (re);
+	*dest_copy = '\0';
+	return((src_copy - src) + dest_len);
 }
 /*
 int	main()

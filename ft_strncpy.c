@@ -16,16 +16,26 @@
 char	*ft_strncpy(char *s1, const char *s2, size_t n)
 {
 	size_t			len;
+	size_t			len_s1;
 	unsigned int	cmpt;
 	char			*fill;
 
 	cmpt = 0;
 	fill = s1;
 	len = ft_strlen(s2);
+	len_s1 = ft_strlen(s1);
 
-	while (cmpt <= len)
+	while (cmpt <= n)
 	{
-		fill[cmpt] = (cmpt > n ? '\0' : s2[cmpt]);
+		if (cmpt > len)
+		{
+			if (len < n)
+				fill[cmpt] = '\0';
+		}
+		else
+		{
+			fill[cmpt] = s2[cmpt];
+		}
 		cmpt++;
 	}
 	return (s1);

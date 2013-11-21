@@ -1,1 +1,6 @@
 *.swo
+test.sh
+Tests/*
+Tests/
+LAST
+.notes

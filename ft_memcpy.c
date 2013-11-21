@@ -6,19 +6,20 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 03:22:01 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/21 03:08:49 by aaubin           ###   ########.fr       */
+/*   Updated: 2013/11/21 04:16:12 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-#include <stdio.h>
-
 void	*ft_memcpy(void *s1, const void *s2, size_t n)
 {
-	char *dp = s1;
-	const char *sp = s2;
+	char		*dp;
+	const char	*sp;
+	
+	sp = s2;
+	dp = s1;
 	while (n--)
 		*dp++ = *sp++;
-	return s1;
+	return (s1);
 }

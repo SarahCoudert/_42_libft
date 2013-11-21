@@ -6,7 +6,7 @@
 #    By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/20 02:17:09 by aaubin            #+#    #+#              #
-#    Updated: 2013/11/21 01:32:58 by aaubin           ###   ########.fr        #
+#    Updated: 2013/11/21 04:02:50 by aaubin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ NAME=libft.a
 SRC=ft_memset.c\
 	ft_bzero.c\
 	ft_memcpy.c\
+	ft_memccpy.c\
 	ft_strlen.c\
 	ft_strdup.c\
 	ft_strcpy.c\

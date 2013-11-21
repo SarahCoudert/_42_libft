@@ -18,23 +18,22 @@ int		ft_atoi(const char *str)
 	unsigned int	go_away;
 	int				positive;
 	int				value;
-	char			c;
 
 	value = 0;
-	positive = (*str == '-' ? -1 : 1);
 	go_away = 0;
 	digit = 0;
+	while ( *str == ' ' || *str == '\t' )
+		str++;
+	positive = (*str == '-' ? -1 : 1);
 	if ( *str == '-' || *str == '+')
 		str++;
 	if ( ft_strlen(str) > 19 )
 		return (positive == 1 ? -1 : 0);
-	while (!go_away && (c = *str++) != '\0')
+	while (ft_isdigit (*str) && *str != '\0')
 	{
-		if (c >= '0' && c <= '9')
-			digit = (int) (c - '0');
-		else
-			go_away = 1;
+		digit = (int) (*str - '0');
 		value = (value * 10) + digit;
+		str++;
 	}
 	return (value * positive);
 }

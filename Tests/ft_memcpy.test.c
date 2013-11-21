@@ -6,7 +6,7 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 03:58:08 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/20 04:42:02 by aaubin           ###   ########.fr       */
+/*   Updated: 2013/11/21 02:46:14 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,19 +74,14 @@ int	main(int argc, char *argv[])
 {
 	int	*r;
 
-	printf("ready");
 	r = ft_init_tests("ft_memcpy");	
-	printf("ready");
 	char *chaine = "Bonjour tout le monde !";
 	char *chaine_mod = "Bonjour tout le monde !";
 	char *chaine_test = "Kikooo";
-	printf("ready");
+	printf("ready\n");
 	printf("before: %s\n", chaine);
-	ft_memcpy(chaine, chaine_test, 4);
-	printf("after: %s\n", chaine);
-	chaine = NULL;
-	chaine_mod = NULL;
-	chaine_test = NULL;
+	//ft_memcpy(chaine, chaine_test, 4);
+	//printf("after: %s\n", chaine);
 
 	/*
 

@@ -6,7 +6,7 @@
 #    By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/20 02:17:09 by aaubin            #+#    #+#              #
-#    Updated: 2013/11/21 05:43:36 by aaubin           ###   ########.fr        #
+#    Updated: 2013/11/21 06:19:20 by aaubin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRC=ft_memset.c\
 	ft_memcpy.c\
 	ft_memccpy.c\
 	ft_memmove.c\
+	ft_memchr.c\
 	ft_strlen.c\
 	ft_strdup.c\
 	ft_strcpy.c\

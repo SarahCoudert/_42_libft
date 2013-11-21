@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/21 03:52:22 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/21 05:43:05 by aaubin           ###   ########.fr       */
+/*   Created: 2013/11/21 04:54:48 by aaubin            #+#    #+#             */
+/*   Updated: 2013/11/21 05:50:20 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-void	*ft_memccpy(void *s1, const void *s2, int c, size_t n)
+void	*ft_memmove(void *s1, const void *s2, size_t n)
 {
-	char *dp = s1;
-	const char *sp = s2;
-	while (n--)
+	char		*dp;
+	const char	*sp;
+	
+	sp = s2;
+	dp = s1;
+	if ( (long int)s2 - ((long int)s1 + ft_strlen(s1)) <= 0 )
 	{
-		if ( *sp == c )
-		{
-			*dp++ = *sp++;
-			return (dp);
-		}
-		*dp++ = *sp++;
+		printf("Ok memoire -> memcpy\n");
+		return (ft_memcpy(s1, s2, n));
 	}
-	return (NULL);
+	printf("Rev memoire\n");
+	n = ( n > ft_strlen(s2) ? ft_strlen(s2) : n );
+	printf("n=%i\n", (int)n);
+	while (n--)
+		dp[n] = sp[n];
+	return (s1);
 }

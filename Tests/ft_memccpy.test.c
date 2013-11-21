@@ -6,7 +6,7 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/21 04:01:12 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/21 04:30:02 by aaubin           ###   ########.fr       */
+/*   Updated: 2013/11/21 04:31:27 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,8 @@ void	ft_test_memccpy(void *mem_org, void *mem_ft, void *value, char c, int lengt
 	char *e = memccpy(mem_org, value, c, length);
 	char *d = ft_memccpy(mem_ft, value, c, length);
 
-	printf("\n[actual](%s) =! [expected](%s)\n", (char *)mem_ft, (char *)mem_org);
 	if (ft_assert_same_memory(mem_ft, mem_org, length))
 	{
-		printf("e=%s, d=%s\n",e, d);
 		ft_digest_results(r, 1);
 	}
 	else

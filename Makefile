@@ -64,4 +64,4 @@ clean:
 	@rm -rf $(OBJ)
 
 mrproper: clean
-	@rm -rf $(NAME)	
+	@rm -rf $(NAME)

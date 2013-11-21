@@ -6,7 +6,7 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 14:19:30 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/21 01:36:53 by aaubin           ###   ########.fr       */
+/*   Updated: 2013/11/21 03:50:39 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@
 
 void*	ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
-void	*ft_memcpy(void *s1, const void *s2, size_t n);// FAIL
+void	*ft_memcpy(void *s1, const void *s2, size_t n);// FAIL (fix 096d2cd1f62c ?)
+void	*ft_memccpy(void *s1, const void *s2, int c, size_t n);
 
 size_t	ft_strlen(const char *s);
 char	*ft_strdup(const char *s1);
@@ -43,15 +44,13 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-int		ft_islower(int c);
-int		ft_isupper(int c);
+int		ft_islower(int c); /* user */
+int		ft_isupper(int c); /* user */
+
 /*
-void	*memccpy(void *restrict s1, const void *restrict s2, int c, size_t n);
 void	*memmove(void *s1, const void *s2, size_t n);
 void	*memchr(const void *s, int c, size_t n);
 int		memcmp(const void *s1, const void *s2, size_t n);
-
-
-
 */
+
 #endif

@@ -6,7 +6,7 @@
 #    By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/20 02:17:09 by aaubin            #+#    #+#              #
-#    Updated: 2013/11/21 00:03:21 by aaubin           ###   ########.fr        #
+#    Updated: 2013/11/21 01:32:58 by aaubin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,16 @@ SRC=ft_memset.c\
 	ft_strnstr.c\
 	ft_strcmp.c\
 	ft_strncmp.c\
-	ft_atoi.c
+	ft_atoi.c\
+	ft_isalpha.c\
+	ft_isdigit.c\
+	ft_isalnum.c\
+	ft_isascii.c\
+	ft_isprint.c\
+	ft_toupper.c\
+	ft_tolower.c\
+	ft_isupper.c\
+	ft_islower.c
 NOM=$(basename $(SRC))
 OBJ=$(addsuffix .o, $(NOM))
 

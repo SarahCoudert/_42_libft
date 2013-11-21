@@ -6,7 +6,7 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/21 04:01:12 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/21 06:04:50 by aaubin           ###   ########.fr       */
+/*   Updated: 2013/11/21 06:07:21 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,13 +47,12 @@ int	main(int argc, char *argv[])
 	
 	char *d = &chaine[10];
 	char *e = &chaine_mod[10];
-	printf("chaine = %s\td = %s\n", chaine, d);
 	char *res = ft_memmove(d, chaine, 0);
 	char *res_mod = memmove(e, chaine, 0);
-	printf("Fin ! res = %s\tchaine = %s\td = %s\n", res, chaine, d);
-	printf("MODELE ! res = %s\tchaine = %s\te = %s\n", res_mod, chaine_mod, e);
-	//ft_test_memmove(chaine_mod, chaine, chaine_test, 10, r);
-	printf("\n");
+	if ( strcmp(res, res_mod) == 0 )
+		ft_digest_results(r, 1);
+	else
+		ft_digest_results(r, 0);
 	ft_end_tests("ft_memmove", r);
 
 	return 0;

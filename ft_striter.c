@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
 /*
 Description
@@ -27,5 +28,15 @@ Fonctions
 */
 void	ft_striter(char *s, void (*f)(char *))
 {
+	int	len;
+	int	counter;
 
+	len = ft_strlen (s);
+	counter = 0;
+	while ( counter < len )
+	{
+		(*f)(s);
+		s++;
+		counter++;
+	}
 }

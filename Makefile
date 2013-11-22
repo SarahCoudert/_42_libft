@@ -43,7 +43,13 @@ SRC=ft_memset.c\
 	ft_toupper.c\
 	ft_tolower.c\
 	ft_isupper.c\
-	ft_islower.c
+	ft_islower.c\
+	ft_memalloc.c\
+	ft_memdel.c\
+	ft_strnew.c\
+	ft_strdel.c\
+	ft_strclr.c\
+	ft_striter.c
 NOM=$(basename $(SRC))
 OBJ=$(addsuffix .o, $(NOM))
 

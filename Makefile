@@ -54,7 +54,9 @@ SRC=ft_memset.c\
 	ft_strmap.c\
 	ft_strmapi.c\
 	ft_strequ.c\
-	ft_strnequ.c
+	ft_strnequ.c\
+	ft_strsub.c\
+	ft_strjoin.c
 NOM=$(basename $(SRC))
 OBJ=$(addsuffix .o, $(NOM))
 

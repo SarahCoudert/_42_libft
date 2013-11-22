@@ -6,7 +6,7 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 09:14:33 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/21 06:56:31 by aaubin           ###   ########.fr       */
+/*   Updated: 2013/11/22 21:27:41 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size)
 	dest_len = dest_copy - dst;
 	counter = size - dest_len;
 	if (counter == 0)
-		return(strlen(src_copy) + dest_len);
+		return(ft_strlen(src_copy) + dest_len);
 	while (*src_copy != '\0')
 	{
 		if (counter != 1)

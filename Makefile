@@ -6,13 +6,13 @@
 #    By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/20 02:17:09 by aaubin            #+#    #+#              #
-#    Updated: 2013/11/21 06:34:45 by aaubin           ###   ########.fr        #
+#    Updated: 2013/11/22 03:43:57 by aaubin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC=gcc
-CFLAGS=-Wall -Werror -Wextra -g
-LDFLAGS=
+CFLAGS=-Wall -Werror -Wextra
+LDFLAGS=-g
 NAME=libft.a
 SRC=ft_memset.c\
 	ft_bzero.c\
@@ -50,7 +50,9 @@ SRC=ft_memset.c\
 	ft_strdel.c\
 	ft_strclr.c\
 	ft_striter.c\
-	ft_striteri.c
+	ft_striteri.c\
+	ft_strmap.c\
+	ft_strmapi.c
 NOM=$(basename $(SRC))
 OBJ=$(addsuffix .o, $(NOM))
 
@@ -61,7 +63,7 @@ $(NAME): $(OBJ)
 	@ranlib $(NAME)
 
 %.o: %.c
-	@$(CC) -o $@ -c $< $(CFLAGS)
+	@$(CC) $(LFLAGS) -o $@ -c $< $(CFLAGS)
 
 fclean: clean mrproper
 

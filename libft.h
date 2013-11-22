@@ -71,5 +71,6 @@ char *	ft_strjoin(char const *s1, char const *s2);
 
 int		ft_islower(int c); /* user */
 int		ft_isupper(int c); /* user */
+int		ft_isblank(int c); /* user */
 
 #endif /* !LIBFT_H */

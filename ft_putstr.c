@@ -14,12 +14,10 @@
 
 void	ft_putstr(char const *s)
 {
-	int	len;
 	int	counter;
 
 	counter = 0;
-	len = ft_strlen (s);
-	while ( counter < len )
+	while (s[counter] != '\0')
 	{
 		ft_putchar(s[counter]);
 		counter++;

@@ -59,12 +59,13 @@ SRC=ft_memset.c\
 	ft_strjoin.c\
 	ft_isblank.c\
 	ft_strtrim.c\
+	ft_strsplit.c\
 	ft_putchar.c\
 	ft_putstr.c
 NOM=$(basename $(SRC))
 OBJ=$(addsuffix .o, $(NOM))
 
-all: verbose
+all: normal
 
 normal: $(NAME)
 

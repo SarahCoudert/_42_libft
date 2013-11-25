@@ -33,6 +33,7 @@ char *	ft_strjoin(char const *s1, char const *s2)
 	int		counter;
 	char	*final;
 
+	ft_putstr("ft_strjoin\n");
 	counter = 0;
 	len = ft_strlen (s1);
 	n = len + ft_strlen(s2) + 1;

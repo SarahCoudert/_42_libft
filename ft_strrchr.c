@@ -21,6 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 	to_find = c;
 	found = NULL;
 	count = 0;
+	ft_putstr("ft_strrchr\n");
 	while (s[count] != '\0')
 	{
 		if (s[count] == to_find)

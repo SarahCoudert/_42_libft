@@ -19,6 +19,7 @@ int		ft_atoi(const char *str)
 	int				positive;
 	int				value;
 
+	ft_putstr("ft_atoi\n");
 	value = 0;
 	go_away = 0;
 	digit = 0;

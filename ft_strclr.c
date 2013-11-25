@@ -27,6 +27,7 @@ void	ft_strclr(char *s)
 	int	length;
 	int	counter;
 
+	ft_putstr("ft_strclr\n");
 	counter = 0;
 	length = ft_strlen (s);
 	while (counter < length)

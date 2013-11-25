@@ -31,6 +31,7 @@ void	ft_striter(char *s, void (*f)(char *))
 	int	len;
 	int	counter;
 
+	ft_putstr("ft_striter\n");
 	len = ft_strlen (s);
 	counter = 0;
 	while ( counter < len )

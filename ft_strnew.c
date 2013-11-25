@@ -31,6 +31,7 @@ char	*ft_strnew(size_t size)
 {
 	void	*str;
 
+	ft_putstr("ft_strnew\n");
 	if ( size == 0 )
 		return (NULL);
 	str = ft_memalloc (size);

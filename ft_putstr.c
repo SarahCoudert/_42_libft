@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/21 01:10:03 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/21 01:35:02 by aaubin           ###   ########.fr       */
+/*   Created: 2013/11/21 14:19:30 by aaubin            #+#    #+#             */
+/*   Updated: 2013/11/21 06:32:39 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isdigit(int c)
+void	ft_putstr(char const *s)
 {
-	ft_putstr("ft_isdigit\n");
-	if (c >= '0' && c <= '9')
+	int	len;
+	int	counter;
+
+	counter = 0;
+	len = ft_strlen (s);
+	while ( counter < len )
 	{
-		return (1);
-	}
-	else
-	{
-		return (0);
+		ft_putchar(&(s[counter]));
+		counter++;
 	}
 }

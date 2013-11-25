@@ -18,6 +18,7 @@ char	*ft_strcpy(char *s1, const char *s2)
 	unsigned int	cmpt;
 	char			*fill;
 
+	ft_putstr("ft_strcpy\n");
 	cmpt = 0;
 	fill = s1;
 	len = ft_strlen(s2);

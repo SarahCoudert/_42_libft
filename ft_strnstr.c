@@ -20,6 +20,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 	int		go;
 
 	go = 0;
+	ft_putstr("ft_strnstr\n");
 	if ((c = *s2++) != '\0')
 	{
 		len = ft_strlen(s2);

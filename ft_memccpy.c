@@ -14,8 +14,12 @@
 
 void	*ft_memccpy(void *s1, const void *s2, int c, size_t n)
 {
-	char *dp = s1;
-	const char *sp = s2;
+	char *dp;
+	const char *sp;
+
+	sp = s2;
+	dp = s1;
+	ft_putstr("ft_memccpy\n");
 	while (n--)
 	{
 		if ( *sp == c )

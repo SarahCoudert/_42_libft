@@ -16,6 +16,7 @@ void	ft_bzero(void *s, size_t n)
 {
 	char	*t;
 
+	ft_putstr("ft_bzero\n");
 	if ( n )
 	{
 		t = s;

@@ -19,6 +19,7 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size)
 	size_t counter;
 	size_t dest_len;
 
+	ft_putstr("ft_strlcat\n");
 	dest_copy = dst;
 	src_copy = src;
 	counter = size;

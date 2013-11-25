@@ -20,6 +20,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 	char			*s1_;
 	char			*s2_;
 
+	ft_putstr("ft_memcmp\n");
 	diff = 0;
 	stop = 0;
 	counter = 0;

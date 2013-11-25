@@ -18,6 +18,7 @@ char	*ft_strchr(const char *s, int c)
 	char	*found;
 	int		count;
 
+	ft_putstr("ft_strchr\n");
 	to_find = c;
 	found = NULL;
 	count = 0;

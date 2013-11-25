@@ -21,6 +21,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 	diff = 0;
 	stop = 0;
 	counter = 0;
+	ft_putstr("ft_strncmp\n");
 	while (s1[counter] != '\0' && !stop)
 	{
 		diff += (s1[counter] - s2[counter]);

@@ -14,6 +14,7 @@
 
 int		ft_isalnum(int c)
 {
+	ft_putstr("ft_isalnum\n");
 	if (ft_isalpha(c) || ft_isdigit(c))
 	{
 		return (1);

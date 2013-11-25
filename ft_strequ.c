@@ -30,6 +30,7 @@ int		ft_strequ(char const *s1, char const *s2)
 {
 	int	eq;
 
+	ft_putstr("ft_strequ\n");
 	eq = (ft_strcmp(s1, s2) == 0 ? 1 : 0);
 	return (eq);
 }

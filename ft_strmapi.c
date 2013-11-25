@@ -34,6 +34,7 @@ char *	ft_strmapi(char const *s, char(*f)(unsigned int, char))
 	unsigned int	counter;
 	char			*new_str;
 
+	ft_putstr("ft_strmapi\n");
 	len = ft_strlen (s);
 	new_str = ft_strnew (len);
 	counter = 0;

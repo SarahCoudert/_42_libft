@@ -16,6 +16,7 @@ void*	ft_memset(void *b, int c, size_t len)
 {
 	char	*s;
 
+	ft_putstr("ft_memset\n");
 	if ( len )
 	{
 		s = b;

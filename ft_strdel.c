@@ -25,5 +25,6 @@ Fonctions
 */
 void	ft_strdel(char **as)
 {
+	ft_putstr("ft_strdel\n");
 	ft_memdel ((void **) as);
 }

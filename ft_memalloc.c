@@ -18,6 +18,7 @@ void	*ft_memalloc(size_t size)
 	unsigned int	counter;
 	char			*explorer;
 
+	ft_putstr("ft_memalloc\n");
 	counter = 0;
 	memory = malloc(size);
 	explorer = (char *)memory;

@@ -20,6 +20,7 @@ char	*ft_strcat(char *s1, const char *s2)
 	unsigned int	cmpt;
 	char			*fill;
 
+	ft_putstr("ft_strcat\n");
 	offset = ft_strlen(s1);
 	fill = s1;
 	len = ft_strlen(s2);

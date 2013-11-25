@@ -64,7 +64,7 @@ SRC=ft_memset.c\
 NOM=$(basename $(SRC))
 OBJ=$(addsuffix .o, $(NOM))
 
-all: verbose
+all: normal
 
 normal: $(NAME)
 

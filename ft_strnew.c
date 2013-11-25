@@ -34,9 +34,7 @@ char	*ft_strnew(size_t size)
 #if defined(VERBOSE)
 	ft_putstr("ft_strnew");
 #endif
-	if ( size == 0 )
-		return (NULL);
-	str = ft_memalloc (size);
+	str = ft_memalloc (size + 1);
 	if (str == NULL)
 		return (NULL);
 	else

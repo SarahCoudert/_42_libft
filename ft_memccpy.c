@@ -19,7 +19,9 @@ void	*ft_memccpy(void *s1, const void *s2, int c, size_t n)
 
 	sp = s2;
 	dp = s1;
-	ft_putstr("ft_memccpy\n");
+#if defined(VERBOSE)
+	ft_putstr("ft_memccpy");
+#endif
 	while (n--)
 	{
 		if ( *sp == c )

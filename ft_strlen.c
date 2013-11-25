@@ -16,7 +16,9 @@ size_t	ft_strlen(const char *s)
 {
 	size_t		len;
 
-	ft_putstr("ft_strlen\n");
+#if defined(VERBOSE)
+	ft_putstr("ft_strlen");
+#endif
 	len = 0;
 	while ('\0' != s[len])
 	{

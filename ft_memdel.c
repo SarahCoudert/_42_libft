@@ -14,7 +14,9 @@
 
 void	ft_memdel(void **ap)
 {
-	ft_putstr("ft_memdel\n");
+#if defined(VERBOSE)
+	ft_putstr("ft_memdel");
+#endif
 	free(*ap);
 	*ap = NULL;
 }

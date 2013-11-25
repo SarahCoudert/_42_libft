@@ -14,7 +14,9 @@
 
 int		ft_isupper(int c)
 {
-	ft_putstr("ft_isupper\n");
+#if defined(VERBOSE)
+	ft_putstr("ft_isupper");
+#endif
 	if (c >= 'A' && c <= 'Z')
 	{
 		return (1);

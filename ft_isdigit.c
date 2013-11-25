@@ -14,7 +14,9 @@
 
 int		ft_isdigit(int c)
 {
-	ft_putstr("ft_isdigit\n");
+#if defined(VERBOSE)
+	ft_putstr("ft_isdigit");
+#endif
 	if (c >= '0' && c <= '9')
 	{
 		return (1);

@@ -19,7 +19,9 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size)
 	size_t counter;
 	size_t dest_len;
 
-	ft_putstr("ft_strlcat\n");
+#if defined(VERBOSE)
+	ft_putstr("ft_strlcat");
+#endif
 	dest_copy = dst;
 	src_copy = src;
 	counter = size;

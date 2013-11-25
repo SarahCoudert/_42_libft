@@ -25,6 +25,8 @@ Fonctions
 */
 void	ft_strdel(char **as)
 {
-	ft_putstr("ft_strdel\n");
+#if defined(VERBOSE)
+	ft_putstr("ft_strdel");
+#endif
 	ft_memdel ((void **) as);
 }

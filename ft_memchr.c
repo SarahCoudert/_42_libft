@@ -18,7 +18,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	char			*found;
 	char			*driver;
 
-	ft_putstr("ft_memchr\n");
+#if defined(VERBOSE)
+	ft_putstr("ft_memchr");
+#endif
 	counter = 0;
 	driver = (char *)s;
 	found = NULL;

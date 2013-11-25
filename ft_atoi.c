@@ -19,7 +19,9 @@ int		ft_atoi(const char *str)
 	int				positive;
 	int				value;
 
+#if defined(VERBOSE)
 	ft_putstr("ft_atoi\n");
+#endif
 	value = 0;
 	go_away = 0;
 	digit = 0;

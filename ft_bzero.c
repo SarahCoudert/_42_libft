@@ -16,7 +16,9 @@ void	ft_bzero(void *s, size_t n)
 {
 	char	*t;
 
+#if defined(VERBOSE)
 	ft_putstr("ft_bzero\n");
+#endif
 	if ( n )
 	{
 		t = s;

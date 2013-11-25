@@ -20,7 +20,9 @@ char	*ft_strncpy(char *s1, const char *s2, size_t n)
 	unsigned int	cmpt;
 	char			*fill;
 
-	ft_putstr("ft_strncpy\n");
+#if defined(VERBOSE)
+	ft_putstr("ft_strncpy");
+#endif
 	cmpt = 0;
 	fill = s1;
 	len = ft_strlen(s2);

@@ -27,7 +27,9 @@ void	ft_strclr(char *s)
 	int	length;
 	int	counter;
 
-	ft_putstr("ft_strclr\n");
+#if defined(VERBOSE)
+	ft_putstr("ft_strclr");
+#endif
 	counter = 0;
 	length = ft_strlen (s);
 	while (counter < length)

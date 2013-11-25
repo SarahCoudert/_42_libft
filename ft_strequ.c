@@ -30,7 +30,9 @@ int		ft_strequ(char const *s1, char const *s2)
 {
 	int	eq;
 
-	ft_putstr("ft_strequ\n");
+#if defined(VERBOSE)
+	ft_putstr("ft_strequ");
+#endif
 	eq = (ft_strcmp(s1, s2) == 0 ? 1 : 0);
 	return (eq);
 }

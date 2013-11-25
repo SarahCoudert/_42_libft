@@ -18,7 +18,9 @@ char	*ft_strchr(const char *s, int c)
 	char	*found;
 	int		count;
 
-	ft_putstr("ft_strchr\n");
+#if defined(VERBOSE)
+	ft_putstr("ft_strchr");
+#endif
 	to_find = c;
 	found = NULL;
 	count = 0;

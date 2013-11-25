@@ -18,7 +18,9 @@ char	*ft_strstr(const char *s1, const char *s2)
 	char sc;
 	size_t len;
 
-	ft_putstr("ft_strstr\n");
+#if defined(VERBOSE)
+	ft_putstr("ft_strstr");
+#endif
 	c = *s2++;
 	if (!c)
 		return (char *) s1;

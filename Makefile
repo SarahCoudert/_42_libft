@@ -64,7 +64,14 @@ SRC=ft_memset.c\
 NOM=$(basename $(SRC))
 OBJ=$(addsuffix .o, $(NOM))
 
-all: $(NAME)
+all: verbose
+
+normal: $(NAME)
+
+verbose: clean all_debug
+
+all_debug: CFLAGS += -DVERBOSE
+all_debug: normal
 
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $^

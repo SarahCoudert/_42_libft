@@ -14,7 +14,9 @@
 
 int		ft_tolower(int c)
 {
-	ft_putstr("ft_tolower\n");
+#if defined(VERBOSE)
+	ft_putstr("ft_tolower");
+#endif
 	if (ft_isupper(c))
 	{
 		return (c + 32);

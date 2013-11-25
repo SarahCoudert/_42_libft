@@ -30,7 +30,9 @@ int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
 	int	eq;
 
-	ft_putstr("ft_strnequ\n");
+#if defined(VERBOSE)
+	ft_putstr("ft_strnequ");
+#endif
 	eq = (ft_strncmp(s1, s2, n) == 0 ? 1 : 0);
 	return (eq);
 }

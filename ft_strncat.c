@@ -19,7 +19,9 @@ char	*ft_strncat(char *s1, const char *s2, size_t n)
 	size_t s1_len;
 	size_t i;
 
-	ft_putstr("ft_strncat\n");
+#if defined(VERBOSE)
+	ft_putstr("ft_strncat");
+#endif
 	s1_len = ft_strlen(s1);
 	i = 0;
 	while (i < n && s2[i] != '\0')

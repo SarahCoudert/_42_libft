@@ -14,7 +14,9 @@
 
 int		ft_isascii(int c)
 {
-	ft_putstr("ft_isascii\n");
+#if defined(VERBOSE)
+	ft_putstr("ft_isascii");
+#endif
 	if (c >= 0 && c <= 0177)
 	{
 		return (1);

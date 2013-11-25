@@ -17,7 +17,9 @@ void	*ft_memmove(void *s1, const void *s2, size_t n)
 	char		*dp;
 	const char	*sp;
 
-	ft_putstr("ft_memmove\n");
+#if defined(VERBOSE)
+	ft_putstr("ft_memmove");
+#endif
 	sp = s2;
 	dp = s1;
 	if ( s1 <= s2 )

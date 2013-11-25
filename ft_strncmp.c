@@ -22,8 +22,19 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 	stop = 0;
 	counter = 0;
 #if defined(VERBOSE)
-	ft_putstr("ft_strncmp");
+	ft_putstr(">> ft_strncmp\n");
+	ft_putstr("\ts1 = [");
+	ft_putstr(s1);
+	ft_putstr("]\n\ts2 = [");
+	ft_putstr(s2);
+	ft_putstr("]\n\tsize = [");
+	ft_putstr(n);
+	ft_putstr("]\n")
 #endif
+	if ( s1 == NULL && s2 == NULL)
+		return (0);
+	else if (s1 == NULL || s2 == NULL)
+		return (999);
 	while (s1[counter] != '\0' && !stop)
 	{
 		diff += (s1[counter] - s2[counter]);
@@ -31,5 +42,9 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 			stop = 1;
 		counter++;
 	}
+
+#if defined(VERBOSE)
+	ft_putstr("<< ft_strncmp\n");
+#endif
 	return (diff);
 }

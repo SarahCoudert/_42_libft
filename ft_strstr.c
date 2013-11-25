@@ -26,6 +26,9 @@ char	*ft_strstr(const char *s1, const char *s2)
 		return (char *) s1;
 
 	len = ft_strlen(s2);
+		sc = *s1++;
+		if (!sc)
+			return (NULL);
 
 	while (ft_strncmp(s1, s2, len) != 0)
 	{
@@ -41,3 +44,30 @@ char	*ft_strstr(const char *s1, const char *s2)
 	}
 	return ((char *) (s1 - 1));
 }
+
+/*
+ *
+ *strstr(const char *in, const char *str)
+{
+	char c;
+	size_t len;
+
+	c = *str++;
+	if (!c)
+		return (char *) in;	// Trivial empty string case
+
+	len = strlen(str);
+	do {
+		char sc;
+
+		do {
+			sc = *in++;
+			if (!sc)
+				return (char *) 0;
+		} while (sc != c);
+	} while (strncmp(in, str, len) != 0);
+
+	return (char *) (in - 1);
+}
+
+*/

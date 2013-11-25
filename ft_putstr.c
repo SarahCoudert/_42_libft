@@ -25,8 +25,3 @@ void	ft_putstr(char const *s)
 		counter++;
 	}
 }
-int main()
-{
-	ft_putstr("Je m'apelle André\n");
-	return 0;
-}

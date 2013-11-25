@@ -21,7 +21,12 @@ void	ft_putstr(char const *s)
 	len = ft_strlen (s);
 	while ( counter < len )
 	{
-		ft_putchar(&(s[counter]));
+		ft_putchar(s[counter]);
 		counter++;
 	}
+}
+int main()
+{
+	ft_putstr("Je m'apelle André\n");
+	return 0;
 }

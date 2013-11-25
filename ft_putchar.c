@@ -14,8 +14,5 @@
 
 void	ft_putchar(char c)
 {
-	if (ft_isprint(c))
-	{
 		write(1, &c, 1);
-	}
 }

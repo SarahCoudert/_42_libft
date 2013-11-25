@@ -18,6 +18,7 @@ char	*ft_strstr(const char *s1, const char *s2)
 	char sc;
 	size_t len;
 
+	ft_putstr("ft_strstr\n");
 	c = *s2++;
 	if (!c)
 		return (char *) s1;

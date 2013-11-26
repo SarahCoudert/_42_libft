@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,14 +12,10 @@
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+void ft_putnbr_fd(int n, int fd)
 {
-	int	counter;
+	char *	value;
 
-	counter = 0;
-	while (s[counter] != '\0')
-	{
-		ft_putchar(s[counter]);
-		counter++;
-	}
+	value = ft_itoa (n);
+	ft_putstr_fd(value, fd);
 }

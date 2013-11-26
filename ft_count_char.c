@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,14 +12,23 @@
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+int		ft_count_char(char const *s, char c)
 {
+	int	len;
 	int	counter;
+	int	count;
 
+	count = 0;
 	counter = 0;
-	while (s[counter] != '\0')
+	len = ft_strlen(s);
+
+	while (counter < len)
 	{
-		ft_putchar(s[counter]);
+		if (s[counter] == c && s[counter + 1] != c)
+		{
+			count++;
+		}
 		counter++;
 	}
+	return (count);
 }

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,14 +12,22 @@
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+char	*	ft_group_char(char const *s, char c)
 {
-	int	counter;
+	char	*clone;
+	int		counter;
+	int		c_counter;
 
 	counter = 0;
+	c_counter = 0;
+	clone = ft_strnew (ft_strlen(s) + 1);
 	while (s[counter] != '\0')
 	{
-		ft_putchar(s[counter]);
+		clone[c_counter] = s[counter];
+		while(s[counter] == c && s[counter + 1] == c)
+			counter++;
 		counter++;
+		c_counter++;
 	}
+	return (clone);
 }

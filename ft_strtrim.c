@@ -51,7 +51,6 @@ char *	ft_strtrim(char const *s)
 			new_str[d++] = s[c++];
 		}
 	}
-	d--;
 	while (ft_isblank (new_str[--d]))
 		new_str[d] = '\0';
 	return (new_str);

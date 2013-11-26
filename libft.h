@@ -68,9 +68,17 @@ char *	ft_strsub(char const *s, unsigned int start, size_t len);
 char *	ft_strjoin(char const *s1, char const *s2);
 char *	ft_strtrim(char const *s);
 char **	ft_strsplit(char const *s, char c);
+char *	ft_itoa(int n);
 
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
+void	ft_putendl(char const *s);
+void	ft_putnbr(int n);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char const *s, int fd);
+void	ft_putendl_fd(char const *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+
 
 
 /* --------------------------- User specific functions -----------------------*/
@@ -78,5 +86,22 @@ void	ft_putstr(char const *s);
 int		ft_islower(int c); /* user */
 int		ft_isupper(int c); /* user */
 int		ft_isblank(int c); /* user */
+
+/*
+ * Regroupe tous les caracteres 'c' (en parametre) adjacents et renvoie
+ * une chaine 'fraiche' netoyee de tout les doublons.
+ * Ex : ft_group_char ("Je suis fatigue...",'.') => "Je suis fatigue."
+ */
+char *	ft_group_char(char const *s, char c);
+
+/*
+ * Compte le nombre d'occurences du caractere c dans la chaine.
+ */
+int		ft_count_char(char const *s, char c);
+
+/*
+ * Effectue un trim sur la chaine s avec le char ch specifie
+ */
+char *	ft_strchartrim(char const *s, char ch);
 
 #endif /* !LIBFT_H */

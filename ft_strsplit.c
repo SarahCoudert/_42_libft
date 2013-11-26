@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 /*
@@ -32,54 +31,30 @@ Retour
 Fonctions
 	libc malloc(3)
 */
-static int		ft_count_char(char const *s, char c)
-{
-	int	len;
-	int	counter;
-	int	count;
-
-	count = 2;
-	counter = 0;
-	len = ft_strlen(s);
-
-	while (counter < len)
-	{
-		if (s[counter] == c && s[counter + 1] != c)
-		{
-			count++;
-		}
-		counter++;
-	}
-	return (count);
-}
-
 char **	ft_strsplit(char const *s, char c)
 {
 	int		n;
-	int		nb;
 	int		sub_counter;
 	int		counter;
 	char	**final;
+	char	*clone;
 
-	nb = 0;
 	counter = 0;
 	sub_counter = 0;
-	n = ft_count_char (s, c);
+	n = ft_count_char (s, c) + 2;
+	clone = ft_strchartrim( ft_group_char (s, c), c);
 	final = (char **) malloc(n * sizeof(char**));
 	n = 0;
-	while (s[counter] != '\0')
+	while (clone[counter] != '\0')
 	{
-		if (s[counter] == c && s[counter + 1] != c)
+		if (clone[counter] == c)
 		{
-			final[n] = ft_strsub (s, sub_counter, counter - sub_counter - nb);
+			final[n] = ft_strsub (clone, sub_counter, counter - sub_counter);
 			n++;
-			sub_counter = counter;
-			nb = 1;
+			sub_counter = counter + 1;
 		}
-		else if (s[counter + 1] == c)
-			nb ++;
 		counter++;
 	}
-	final[n] = ft_strsub (s, sub_counter, counter - sub_counter);
+	final[n] = ft_strsub (clone, sub_counter, counter - sub_counter);
 	return (final);
 }

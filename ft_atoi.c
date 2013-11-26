@@ -28,6 +28,8 @@ int		ft_atoi(const char *str)
 	positive = (*str == '-' ? -1 : 1);
 	if ( *str == '-' || *str == '+')
 		str++;
+	while (*str == '0')
+		str++;
 	if ( ft_strlen(str) > 19 )
 		return (positive == 1 ? -1 : 0);
 	while (ft_isdigit (*str) && *str != '\0')

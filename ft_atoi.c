@@ -19,13 +19,11 @@ int		ft_atoi(const char *str)
 	int				positive;
 	int				value;
 
-#if defined(VERBOSE)
-	ft_putstr("ft_atoi\n");
-#endif
 	value = 0;
 	go_away = 0;
 	digit = 0;
-	while ( *str == ' ' || *str == '\t' )
+	while ( *str == ' ' || *str == '\t' || *str == '\n' || *str == '\v'
+			|| *str == '\r' || *str == '\f')
 		str++;
 	positive = (*str == '-' ? -1 : 1);
 	if ( *str == '-' || *str == '+')

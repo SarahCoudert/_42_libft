@@ -37,9 +37,6 @@ char *	ft_strtrim(char const *s)
 	unsigned int	c;
 	char			*new_str;
 
-#if defined(VERBOSE)
-	ft_putstr("ft_strtrim");
-#endif
 	d = 0;
 	c = 0;
 	trim_start = 0;

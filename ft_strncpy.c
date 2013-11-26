@@ -18,9 +18,6 @@ char	*ft_strncpy(char *s1, const char *s2, size_t n)
 	char			*fill;
 
 
-#if defined(VERBOSE)
-	ft_putstr("ft_strncpy");
-#endif
 	fill = s1;
 	while (n > 0 && *s2 != '\0') {
 		*fill++ = *s2++;

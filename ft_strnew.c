@@ -31,9 +31,6 @@ char	*ft_strnew(size_t size)
 {
 	void	*str;
 
-#if defined(VERBOSE)
-	ft_putstr("ft_strnew");
-#endif
 	str = ft_memalloc (size + 1);
 	if (str == NULL)
 		return (NULL);

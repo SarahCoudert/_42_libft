@@ -14,9 +14,6 @@
 
 int		ft_isblank(int c)
 {
-#if defined(VERBOSE)
-	ft_putstr("ft_isblank\n");
-#endif
 	if (c == ' ' || c == '\n' || c == '\t')
 		return (1);
 	else

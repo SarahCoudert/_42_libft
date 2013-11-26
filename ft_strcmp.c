@@ -17,9 +17,6 @@ int		ft_strcmp(const char *s1, const char *s2)
 	int		diff;
 	int		counter;
 
-#if defined(VERBOSE)
-	ft_putstr("ft_strcmp");
-#endif
 	diff = 0;
 	counter = 0;
 	while (s1[counter] == s2[counter] && s1[counter] != '\0')

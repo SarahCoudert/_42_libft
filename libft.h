@@ -6,7 +6,7 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 14:19:30 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/22 01:28:57 by aaubin           ###   ########.fr       */
+/*   Updated: 2013/11/28 03:12:06 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,5 +118,10 @@ int			ft_count_char(char const *s, char c);
  * Effectue un trim sur la chaine s avec le char ch specifie
  */
 char *		ft_strchartrim(char const *s, char ch);
+
+/*
+ * Effectue une reallocation de la memoire de [buf] en taille [new_size]
+ */
+void *		ft_memrealloc(void *buf, size_t old_size, size_t new_size);
 
 #endif /* !LIBFT_H */

@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                        :+:      :+:    :+:   */
+/*   ft_memrealloc.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/19 14:19:30 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/22 01:28:57 by aaubin           ###   ########.fr       */
+/*   Created: 2013/11/28 02:36:34 by aaubin            #+#    #+#             */
+/*   Updated: 2013/11/28 03:35:07 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+void *	ft_memrealloc(void *buf, size_t old_size, size_t new_size)
 {
-	if (lst && f)
+	char	*new_buf;
+	char	*_buf;
+
+	_buf = (char *) buf;
+	new_buf = ft_memalloc(new_size);
+	if ( new_buf )
 	{
-		ft_lstiter(lst->next, f);
-		(*f)(lst);
+		new_buf = ft_memcpy((void *) new_buf, (void *) buf, old_size);
+		free(buf);
 	}
+	return ( (void *) new_buf );
 }

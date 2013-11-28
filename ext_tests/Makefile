@@ -6,7 +6,7 @@
 #    By: amerle <amerle@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/19 14:29:45 by amerle            #+#    #+#              #
-#    Updated: 2013/11/27 05:15:40 by aaubin           ###   ########.fr        #
+#    Updated: 2013/11/28 03:30:02 by aaubin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,7 +72,8 @@ SRCS = \
 	   ft_test_lstdel.c \
 	   ft_test_lstadd.c \
 	   ft_test_lstiter.c \
-	   ft_test_lstmap.c
+	   ft_test_lstmap.c\
+	   ft_test_memrealloc.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)

@@ -8,7 +8,7 @@ static void	ft_test_lstdel2_del(void *content, size_t content_size)
 	char	*str;
 
 	str = (char *)content;
-	if (str && content_size == strlen(str))
+	if (str && content_size == (strlen(str) + 1))
 		++g_is_delete;
 }
 
@@ -22,14 +22,10 @@ int	ft_test_lstdel(void)
 
 	res = 0;
 	ft_print_begin("ft_lstdel");
-	elem = (t_list*)malloc(sizeof(t_list));
-	elem2 = (t_list*)malloc(sizeof(t_list));
+	elem = ft_lstnew((void *) str, strlen(str) + 1);
+	elem2 = ft_lstnew((void *) str2, strlen(str2) + 1);
 	elem->next = elem2;
-	elem->content = (void *)str;
-	elem->content_size = strlen(str);
 	elem2->next = 0;
-	elem2->content = (void *)str2;
-	elem2->content_size = strlen(str2);
 	g_is_delete = 0;
 	ft_lstdel(&elem, ft_test_lstdel2_del);
 	if (elem || g_is_delete != 2)

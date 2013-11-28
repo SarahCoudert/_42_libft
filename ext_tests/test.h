@@ -6,7 +6,7 @@
 /*   By: amerle <amerle@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 06:55:12 by amerle            #+#    #+#             */
-/*   Updated: 2013/11/24 03:29:30 by amerle           ###   ########.fr       */
+/*   Updated: 2013/11/28 03:30:27 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,7 @@ int 	ft_test_lstdel(void);
 int 	ft_test_lstadd(void);
 int 	ft_test_lstiter(void);
 int 	ft_test_lstmap(void);
+int 	ft_test_memrealloc(void);
 
 int	g_tests_ok;
 int g_tests;

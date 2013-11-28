@@ -1,5 +1,6 @@
 #include "test.h"
 
+
 static void	ft_test_lstiter_iter(t_list *elem)
 {
 	int	*ptr;
@@ -31,6 +32,7 @@ int	ft_test_lstiter(void)
 	elem2->content = (void *)&i2;
 	elem2->next = 0;
 	ft_lstiter(elem, ft_test_lstiter_iter);
+
 	if (i1 != 151 || i2 != -129)
 		++res;
 	printf("Test");

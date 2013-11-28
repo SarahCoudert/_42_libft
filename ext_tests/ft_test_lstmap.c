@@ -28,13 +28,9 @@ int	ft_test_lstmap(void)
 	new_list = 0;
 	new_list_next = 0;
 	ft_print_begin("ft_lstmap");
-	elem = (t_list*)malloc(sizeof(t_list));
-	elem2 = (t_list*)malloc(sizeof(t_list));
+	elem = ft_lstnew((void *) &i1, sizeof(int));
+	elem2 = ft_lstnew((void *) &i2, sizeof(int));
 	elem->next = elem2;
-	elem->content = (void *)&i1;
-	elem->content_size = elem2->content_size = sizeof(int);
-	elem2->content = (void *)&i2;
-	elem2->next = 0;
 	new_list = ft_lstmap(elem, ft_test_lstmap_map);
 	if (!new_list || !new_list->next)
 	{
@@ -44,7 +40,7 @@ int	ft_test_lstmap(void)
 	else
 	{
 		new_list_next = new_list->next;
-		if (new_list == elem || new_list_next == elem2 || i1 != 149 || i2 != -131)
+		if (new_list == elem || new_list->content == (void *)&i1 || new_list_next->content == (void *)&i2 || new_list_next == elem2 || *((int*)new_list->content) != 149 || *((int*)new_list->next->content) != -131)
 			++res;
 	}
 	printf("Test");

@@ -6,7 +6,7 @@
 /*   By: amerle <amerle@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 14:33:54 by amerle            #+#    #+#             */
-/*   Updated: 2013/11/25 21:45:04 by amerle           ###   ########.fr       */
+/*   Updated: 2013/11/28 03:30:53 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ int			main(void)
 	res += ft_test_lstadd();
 	res += ft_test_lstiter();
 	res += ft_test_lstmap();
+	res += ft_test_memrealloc();
 
 	percent = g_tests_ok * 100 / g_tests;
 	printf("\nPourcentage de reussite : \033[%dm%d\033[0m %%\n", (percent == 100) ? 32 : ((percent >= 70) ? 33 : 31), percent);

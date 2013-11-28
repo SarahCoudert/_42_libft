@@ -17,6 +17,15 @@
 # include <stdlib.h>
 # include <string.h>
 
+# define false        0
+# define true        1
+
+typedef		unsigned char		uc;
+typedef		unsigned int		ui;
+typedef		unsigned long		ul;
+typedef		unsigned char		bool;
+
+
 /* ------------------------------ List structure -----------------------------*/
 
 typedef struct		s_list
@@ -123,5 +132,10 @@ char *		ft_strchartrim(char const *s, char ch);
  * Effectue une reallocation de la memoire de [buf] en taille [new_size]
  */
 void *		ft_memrealloc(void *buf, size_t old_size, size_t new_size);
+
+/*
+ * Renvoie la puissance BASE de exp
+ */
+int	ft_pow(int base, int exp);
 
 #endif /* !LIBFT_H */

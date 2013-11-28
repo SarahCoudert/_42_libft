@@ -78,6 +78,7 @@ SRC=ft_memset.c\
 	ft_count_char.c\
 	ft_group_char.c\
 	ft_memrealloc.c\
+	ft_pow.c\
 	ft_strchartrim.c
 
 NOM=$(basename $(SRC))

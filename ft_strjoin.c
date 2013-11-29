@@ -6,7 +6,7 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/21 14:19:30 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/21 06:32:39 by aaubin           ###   ########.fr       */
+/*   Updated: 2013/11/29 19:11:22 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ char *	ft_strjoin(char const *s1, char const *s2)
 	int		counter;
 	char	*final;
 
-	ft_putstr("ft_strjoin\n");
 	counter = 0;
 	len = ft_strlen (s1);
 	n = len + ft_strlen(s2) + 1;

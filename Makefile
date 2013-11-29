@@ -6,7 +6,7 @@
 #    By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/20 02:17:09 by aaubin            #+#    #+#              #
-#    Updated: 2013/11/28 03:34:33 by aaubin           ###   ########.fr        #
+#    Updated: 2013/11/29 17:27:50 by aaubin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,6 +79,7 @@ SRC=ft_memset.c\
 	ft_group_char.c\
 	ft_memrealloc.c\
 	ft_pow.c\
+	ft_nbrlen.c\
 	ft_strchartrim.c
 
 NOM=$(basename $(SRC))

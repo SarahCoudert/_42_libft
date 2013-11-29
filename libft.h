@@ -6,7 +6,7 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 14:19:30 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/28 03:12:06 by aaubin           ###   ########.fr       */
+/*   Updated: 2013/11/29 17:30:14 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,5 +137,10 @@ void *		ft_memrealloc(void *buf, size_t old_size, size_t new_size);
  * Renvoie la puissance BASE de exp
  */
 int	ft_pow(int base, int exp);
+
+/*
+ * Renvoie la longueur d'un nombre (ex : 1000 = 4)
+ */
+int	ft_nbrlen(int nombre);
 
 #endif /* !LIBFT_H */

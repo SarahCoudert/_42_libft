@@ -32,17 +32,17 @@ Fonctions
 	libc malloc(3)
 */
 
-static char ** ft_get_array(char const *s, char c)
+static char **	ft_get_array(char const *s, char c)
 {
-	int	n;
+	int		n;
+	char	**final;
 
 	n = ft_count_char (s, c) + 2;
-	clone = ft_strchartrim( ft_group_char (s, c), c);
 	final = (char **) malloc(n * sizeof(char**));
 	return (final);
 }
 
-char **	ft_strsplit(char const *s, char c)
+char **			ft_strsplit(char const *s, char c)
 {
 	int		n;
 	int		sub_counter;
@@ -52,6 +52,7 @@ char **	ft_strsplit(char const *s, char c)
 
 	counter = 0;
 	sub_counter = 0;
+	clone = ft_strchartrim( ft_group_char (s, c), c);
 	final = ft_get_array(s, c);
 	if ( final != NULL )
 	{

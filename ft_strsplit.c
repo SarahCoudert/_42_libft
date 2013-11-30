@@ -31,6 +31,17 @@ Retour
 Fonctions
 	libc malloc(3)
 */
+
+static char ** ft_get_array(char const *s, char c)
+{
+	int	n;
+
+	n = ft_count_char (s, c) + 2;
+	clone = ft_strchartrim( ft_group_char (s, c), c);
+	final = (char **) malloc(n * sizeof(char**));
+	return (final);
+}
+
 char **	ft_strsplit(char const *s, char c)
 {
 	int		n;
@@ -41,20 +52,21 @@ char **	ft_strsplit(char const *s, char c)
 
 	counter = 0;
 	sub_counter = 0;
-	n = ft_count_char (s, c) + 2;
-	clone = ft_strchartrim( ft_group_char (s, c), c);
-	final = (char **) malloc(n * sizeof(char**));
-	n = 0;
-	while (clone[counter] != '\0')
+	final = ft_get_array(s, c);
+	if ( final != NULL )
 	{
-		if (clone[counter] == c)
+		n = 0;
+		while (clone[counter] != '\0')
 		{
-			final[n] = ft_strsub (clone, sub_counter, counter - sub_counter);
-			n++;
-			sub_counter = counter + 1;
+			if (clone[counter] == c)
+			{
+				final[n] = ft_strsub (clone, sub_counter, counter - sub_counter);
+				n++;
+				sub_counter = counter + 1;
+			}
+			counter++;
 		}
-		counter++;
+		final[n] = ft_strsub (clone, sub_counter, counter - sub_counter);
 	}
-	final[n] = ft_strsub (clone, sub_counter, counter - sub_counter);
 	return (final);
 }

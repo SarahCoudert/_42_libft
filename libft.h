@@ -6,7 +6,7 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 14:19:30 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/29 17:30:14 by aaubin           ###   ########.fr       */
+/*   Updated: 2013/12/01 14:43:27 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 typedef		unsigned char		uc;
 typedef		unsigned int		ui;
 typedef		unsigned long		ul;
-typedef		unsigned char		bool;
 
 
 /* ------------------------------ List structure -----------------------------*/

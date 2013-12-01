@@ -16,13 +16,13 @@ size_t	ft_strlen(const char *s)
 {
 	size_t		len;
 
-#if defined(VERBOSE)
-	ft_putstr("ft_strlen");
-#endif
 	len = 0;
-	while ('\0' != s[len])
+	if ( s != NULL )
 	{
-		len ++;
+		while ('\0' != s[len])
+		{
+			len ++;
+		}
 	}
 	return (len);
 }

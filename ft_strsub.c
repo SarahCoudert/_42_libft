@@ -35,7 +35,8 @@ char *	ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	unsigned int	counter;
 	char			*dest;
-
+	if ( s == NULL )
+		return (NULL);
 	dest = ft_strnew (len+1);
 	counter = 0;
 	if (dest == NULL)

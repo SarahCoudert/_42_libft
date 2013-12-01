@@ -6,7 +6,7 @@
 #    By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/20 02:17:09 by aaubin            #+#    #+#              #
-#    Updated: 2013/11/22 03:43:57 by aaubin           ###   ########.fr        #
+#    Updated: 2013/12/01 14:46:51 by aaubin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,8 +69,17 @@ SRC=ft_memset.c\
 	ft_putstr_fd.c\
 	ft_putendl_fd.c\
 	ft_putnbr_fd.c\
+	ft_lstnew.c\
+	ft_lstdelone.c\
+	ft_lstdel.c\
+	ft_lstadd.c\
+	ft_lstiter.c\
+	ft_lstmap.c\
 	ft_count_char.c\
 	ft_group_char.c\
+	ft_memrealloc.c\
+	ft_pow.c\
+	ft_nbrlen.c\
 	ft_strchartrim.c
 
 NOM=$(basename $(SRC))
@@ -87,10 +96,10 @@ all_debug: normal
 
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $^
-	@ranlib $(NAME)
+	#@ranlib $(NAME)
 
 %.o: %.c
-	@$(CC) $(LFLAGS) -o $@ -c $< $(CFLAGS)
+	@$(CC) -g $(LFLAGS) -o $@ -c $< $(CFLAGS)
 
 fclean: clean mrproper
 

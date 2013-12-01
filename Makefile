@@ -6,7 +6,7 @@
 #    By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/20 02:17:09 by aaubin            #+#    #+#              #
-#    Updated: 2013/12/01 14:46:51 by aaubin           ###   ########.fr        #
+#    Updated: 2013/12/01 17:29:58 by aaubin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,7 +96,7 @@ all_debug: normal
 
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $^
-	#@ranlib $(NAME)
+	@ranlib $(NAME)
 
 %.o: %.c
 	@$(CC) -g $(LFLAGS) -o $@ -c $< $(CFLAGS)

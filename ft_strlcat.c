@@ -12,17 +12,17 @@
 
 #include "libft.h"
 
-static void	ft_process_copy(int counter, char *dest_copy, const char *src_copy)
+static void	ft_process_c(int counter, char **dest_copy, const char **src_copy)
 {
-	while (*src_copy != '\0')
+	while (**src_copy != '\0')
 	{
 		if (counter != 1)
 		{
-			*dest_copy = *src_copy;
-			dest_copy++;
+			**dest_copy = **src_copy;
+			*dest_copy = *dest_copy + 1;
 			counter--;
 		}
-		src_copy++;
+		*src_copy= *src_copy + 1;
 	}
 }
 
@@ -45,7 +45,7 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size)
 	counter = size - dest_len;
 	if (counter == 0)
 		return(ft_strlen(src_copy) + dest_len);
-	ft_process_copy (counter, dest_copy, src_copy);
+	ft_process_c(counter, &dest_copy, &src_copy);
 	*dest_copy = '\0';
 	return((src_copy - src) + dest_len);
 }

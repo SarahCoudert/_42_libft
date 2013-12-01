@@ -6,7 +6,7 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/21 14:19:30 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/21 06:32:39 by aaubin           ###   ########.fr       */
+/*   Updated: 2013/12/01 17:41:42 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char *	ft_strsub(char const *s, unsigned int start, size_t len)
 	dest = ft_strnew (len+1);
 	counter = 0;
 	if (dest == NULL)
-		return NULL;
+		return (NULL);
 	while (counter < len + start)
 	{
 		if (counter >= start)

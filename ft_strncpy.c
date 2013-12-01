@@ -6,7 +6,7 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 06:31:27 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/20 06:49:12 by aaubin           ###   ########.fr       */
+/*   Updated: 2013/12/01 17:41:03 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ char	*ft_strncpy(char *s1, const char *s2, size_t n)
 		*fill++ = '\0';
 		--n;
 	}
-	return s1;
+	return (s1);
 }

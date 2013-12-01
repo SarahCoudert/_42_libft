@@ -6,7 +6,7 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/28 02:36:34 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/28 03:35:07 by aaubin           ###   ########.fr       */
+/*   Updated: 2013/12/01 17:52:29 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void *	ft_memrealloc(void *buf, size_t old_size, size_t new_size)
 	char	*_buf;
 
 	_buf = (char *) buf;
-	new_buf = ft_memalloc(new_size);
+	new_buf = (char *) ft_memalloc(new_size);
 	if ( new_buf )
 	{
 		new_buf = ft_memcpy((void *) new_buf, (void *) buf, old_size);

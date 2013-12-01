@@ -6,7 +6,7 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/21 03:12:17 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/21 08:35:25 by aaubin           ###   ########.fr       */
+/*   Updated: 2013/12/01 17:49:40 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memalloc(size_t size)
 	ft_putstr("ft_memalloc");
 #endif
 	counter = 0;
-	memory = malloc(size);
+	memory = (void *) malloc(size);
 	explorer = (char *)memory;
 	if (memory != NULL)
 	{

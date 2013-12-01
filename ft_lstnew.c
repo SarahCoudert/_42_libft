@@ -6,7 +6,7 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/19 14:19:30 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/22 01:28:57 by aaubin           ###   ########.fr       */
+/*   Updated: 2013/12/01 17:50:58 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list * 	ft_lstnew(void const *content, size_t content_size)
 	t_list	*list;
 	void	*ctnt;
 
-	ctnt = ft_memalloc(content_size + 1);
+	ctnt = (void *) ft_memalloc(content_size + 1);
 	if ( content == NULL )
 	{
 		ctnt = NULL;

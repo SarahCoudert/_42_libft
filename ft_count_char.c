@@ -18,6 +18,8 @@ int		ft_count_char(char const *s, char c)
 	int	counter;
 	int	count;
 
+	if ( s == NULL )
+		return (0);
 	count = 0;
 	counter = 0;
 	len = ft_strlen(s);

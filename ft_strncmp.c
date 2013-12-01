@@ -19,6 +19,10 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 
 	if ( s1 == NULL && s2 == NULL )
 		return (0);
+	if ( s1 == NULL )
+		return (-1);
+	if ( s2 == NULL )
+		return (1);
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
 	if ( n > len1 )

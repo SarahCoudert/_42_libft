@@ -38,7 +38,8 @@ static char **	ft_get_array(char const *s, char c)
 	char	**final;
 
 	n = ft_count_char (s, c) + 2;
-	final = (char **) malloc(n * sizeof(char**));
+	final = (char **) ft_memalloc (n * sizeof(char**));
+	*final = ft_strdup("");
 	return (final);
 }
 
@@ -54,14 +55,14 @@ char **			ft_strsplit(char const *s, char c)
 	sub_counter = 0;
 	clone = ft_strchartrim( ft_group_char (s, c), c);
 	final = ft_get_array(s, c);
-	if ( final != NULL )
+	if ( final != NULL && s != NULL )
 	{
 		n = 0;
 		while (clone[counter] != '\0')
 		{
 			if (clone[counter] == c)
 			{
-				final[n] = ft_strsub (clone, sub_counter, counter - sub_counter);
+				final[n++] = ft_strsub (clone, sub_counter, counter - sub_counter);
 				n++;
 				sub_counter = counter + 1;
 			}

@@ -33,6 +33,12 @@ char *	ft_strjoin(char const *s1, char const *s2)
 	int		counter;
 	char	*final;
 
+	if ( s1 == NULL && s2 == NULL )
+		return ((char *) NULL);
+	if ( s1 == NULL && s2 )
+		return (ft_strdup(s2));
+	if ( s2 == NULL && s1 )
+		return (ft_strdup(s1));
 	counter = 0;
 	len = ft_strlen (s1);
 	n = len + ft_strlen(s2) + 1;

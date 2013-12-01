@@ -31,15 +31,15 @@ void	ft_striter(char *s, void (*f)(char *))
 	int	len;
 	int	counter;
 
-#if defined(VERBOSE)
-	ft_putstr("ft_striter");
-#endif
-	len = ft_strlen (s);
-	counter = 0;
-	while ( counter < len )
+	if ( s != NULL && f != NULL )
 	{
-		(*f)(s);
-		s++;
-		counter++;
+		len = ft_strlen (s);
+		counter = 0;
+		while ( counter < len )
+		{
+			(*f)(s);
+			s++;
+			counter++;
+		}
 	}
 }

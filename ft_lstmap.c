@@ -14,23 +14,28 @@
 
 t_list *	ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem))
 {
-	t_list	*new_l;
-	t_list	*start;
-	t_list	*start_d;
+	t_list		*brand_new_list;
+	t_list		*the_beginning;
+	t_list		*tempo;
 
-	start = lst;
-	if ( start != NULL && start->content != NULL )
+	if (f == NULL && lst == NULL)
+		return (NULL);
+	tempo = f(lst);
+	brand_new_list = ft_lstnew(tempo->content, tempo->content_size);
+	if (brand_new_list == NULL)
+		return (NULL);
+	the_beginning = brand_new_list;
+	while (lst->next != NULL)
 	{
-		new_l = ft_lstnew (start->content, start->content_size);
-		new_l = (*f)(new_l);
-		start_d = new_l;
-		while ( (start = start->next) )
+		tempo = f(lst->next);
+		brand_new_list->next = ft_lstnew(tempo->content, tempo->content_size);
+		if (brand_new_list->next == NULL)
 		{
-			start_d->next = ft_lstnew (start->content, start->content_size);
-			start_d = start_d->next;
-			start_d = (*f)(start_d);
+			ft_lstdel(&the_beginning, &ft_bzero);
+			return (NULL);
 		}
-		return (new_l);
+		lst = lst->next;
+		brand_new_list = brand_new_list->next;
 	}
-	return (NULL);
+	return (the_beginning);
 }

@@ -22,7 +22,7 @@ char *	ft_strchartrim(char const *s, char ch)
 	d = 0;
 	c = 0;
 	trim_start = 0;
-	new_str = ft_strnew (ft_strlen (s));
+	new_str = ft_strnew (ft_strlen (s) + 1);
 	while ( c < ft_strlen (s))
 	{
 		if ( !trim_start && s[c] == ch)

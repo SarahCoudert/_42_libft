@@ -18,6 +18,8 @@ char	*	ft_group_char(char const *s, char c)
 	int		counter;
 	int		c_counter;
 
+	if ( s == NULL )
+		return (NULL);
 	counter = 0;
 	c_counter = 0;
 	clone = ft_strnew (ft_strlen(s) + 1);

@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 CC=gcc
-CFLAGS=-Wall -Werror -Wextra
+CFLAGS=-Wall -Werror -Wextra -pedandic
 LDFLAGS=-g
 NAME=libft.a
 SRC=ft_memset.c\

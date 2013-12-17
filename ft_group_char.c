@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_group_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/21 14:19:30 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/21 06:32:39 by aaubin           ###   ########.fr       */
+/*   Created: 2013/12/12 08:26:56 by aaubin            #+#    #+#             */
+/*   Updated: 2013/12/12 08:27:10 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*	ft_group_char(char const *s, char c)
 	while (s[counter] != '\0')
 	{
 		clone[c_counter] = s[counter];
-		while(s[counter] == c && s[counter + 1] == c)
+		while (s[counter] == c && s[counter + 1] == c)
 			counter++;
 		counter++;
 		c_counter++;

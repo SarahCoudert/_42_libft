@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 05:04:12 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/20 05:17:42 by aaubin           ###   ########.fr       */
+/*   Created: 2013/12/12 09:06:29 by aaubin            #+#    #+#             */
+/*   Updated: 2013/12/12 09:06:46 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *s)
 	size_t		len;
 
 	len = 0;
-	if ( s != NULL )
+	if (s != NULL)
 	{
 		while ('\0' != s[len])
 		{

@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/21 14:19:30 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/21 06:32:39 by aaubin           ###   ########.fr       */
+/*   Created: 2013/12/12 08:56:53 by aaubin            #+#    #+#             */
+/*   Updated: 2013/12/12 08:57:02 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 		write(fd, &c, 1);
 }

@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/21 14:19:30 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/21 06:32:39 by aaubin           ###   ########.fr       */
+/*   Created: 2013/12/12 08:57:25 by aaubin            #+#    #+#             */
+/*   Updated: 2013/12/12 08:57:36 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putendl_fd(char const *s, int fd)
+void	ft_putendl_fd(char const *s, int fd)
 {
-	ft_putstr_fd (s, fd);
-	ft_putstr_fd ("\n", fd);
+	ft_putstr_fd(s, fd);
+	ft_putstr_fd("\n", fd);
 }

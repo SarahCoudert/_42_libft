@@ -6,12 +6,12 @@
 #    By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/20 02:17:09 by aaubin            #+#    #+#              #
-#    Updated: 2013/12/01 17:29:58 by aaubin           ###   ########.fr        #
+#    Updated: 2013/12/13 12:13:17 by aaubin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC=gcc
-CFLAGS=-Wall -Werror -Wextra -pedandic
+CFLAGS=-Wall -Werror -Wextra -pedantic
 LDFLAGS=-g
 NAME=libft.a
 SRC=ft_memset.c\

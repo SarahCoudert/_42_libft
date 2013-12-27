@@ -6,36 +6,71 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/21 14:19:30 by aaubin            #+#    #+#             */
-/*   Updated: 2013/12/06 04:13:21 by aaubin           ###   ########.fr       */
+/*   Updated: 2013/11/21 06:32:39 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char **	ft_strsplit(char const *s, char c)
+static int	nb_words(char const *s, char c)
 {
-	int		n;
-	int		sub_counter;
-	int		counter;
-	char	**final;
-	char	*clone;
+	int	count;
+	int	state;
 
-	counter = 0;
-	sub_counter = 0;
-	n = ft_count_char (s, c) + 2;
-	clone = ft_strchartrim( ft_group_char (s, c), c);
-	final = (char **) malloc(n * sizeof(char**));
-	n = 0;
-	while (clone[counter] != '\0')
+	state = OUT;
+	count = 0;
+	while (*s)
 	{
-		if (clone[counter] == c)
+		if (state == OUT && *s != c)
 		{
-			final[n] = ft_strsub (clone, sub_counter, counter - sub_counter);
-			n++;
-			sub_counter = counter + 1;
+			state = IN;
+			++count;
 		}
-		counter++;
+		if (state == IN && *s == c)
+			state = OUT;
+		++s;
 	}
-	final[n] = ft_strsub (clone, sub_counter, counter - sub_counter);
-	return (final);
+	return (count);
+}
+
+static void	copy_into_array(char **array, char const *s, char c)
+{
+	int		state;
+	int		beginning_word;
+	int		i;
+
+	state = OUT;
+	i = 0;
+	while (s[i])
+	{
+		if (state == OUT && s[i] != c)
+		{
+			state = IN;
+			beginning_word = i;
+		}
+		if (state == IN && s[i] == c)
+		{
+			state = OUT;
+			*array = ft_strsub(s, beginning_word, i - beginning_word);
+			++array;
+		}
+		++i;
+	}
+	if (state == IN)
+		*array = ft_strsub(s, beginning_word, i - beginning_word);
+}
+
+char		**ft_strsplit(char const *s, char c)
+{
+	char		**ret;
+	int		nb;
+
+	nb = nb_words(s, c) + 1;
+	ret = (char **)malloc(nb * sizeof(char *));
+	if (ret)
+	{
+		copy_into_array(ret, s, c);
+		ret[nb - 1] = 0;
+	}
+	return (ret);
 }

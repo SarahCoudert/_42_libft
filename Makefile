@@ -6,12 +6,12 @@
 #    By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/20 02:17:09 by aaubin            #+#    #+#              #
-#    Updated: 2013/12/01 17:29:58 by aaubin           ###   ########.fr        #
+#    Updated: 2013/12/04 00:39:19 by aaubin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC=gcc
-CFLAGS=-Wall -Werror -Wextra -pedandic
+CFLAGS=-I includes/ -Wall -Werror -Wextra
 LDFLAGS=-g
 NAME=libft.a
 SRC=ft_memset.c\
@@ -80,7 +80,9 @@ SRC=ft_memset.c\
 	ft_memrealloc.c\
 	ft_pow.c\
 	ft_nbrlen.c\
-	ft_strchartrim.c
+	ft_strchartrim.c\
+	ft_strpos.c\
+	ft_realloc.c
 
 NOM=$(basename $(SRC))
 OBJ=$(addsuffix .o, $(NOM))

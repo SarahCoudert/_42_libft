@@ -17,8 +17,11 @@
 # include <stdlib.h>
 # include <string.h>
 
-# define false        0
-# define true        1
+# define		false	0
+# define		true		1
+
+# define		OUT		0
+# define		IN		1
 
 typedef		unsigned char		uc;
 typedef		unsigned int		ui;
@@ -142,4 +145,7 @@ int	ft_pow(int base, int exp);
  */
 int	ft_nbrlen(int nombre);
 
+int ft_strpos(const char *s1, const char *s2);
+
+void	*ft_realloc(void *ptr, size_t old, size_t size);
 #endif /* !LIBFT_H */

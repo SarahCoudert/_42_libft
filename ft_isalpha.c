@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/21 01:06:29 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/21 01:34:39 by aaubin           ###   ########.fr       */
+/*   Created: 2013/12/12 08:27:29 by aaubin            #+#    #+#             */
+/*   Updated: 2013/12/12 08:27:37 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 
 int		ft_isalpha(int c)
 {
-
-#if defined(VERBOSE)
-	ft_putstr("ft_isalpha\n");
-#endif
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
 		return (1);

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/20 23:28:23 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/21 06:56:34 by aaubin           ###   ########.fr       */
+/*   Created: 2013/12/12 09:11:00 by aaubin            #+#    #+#             */
+/*   Updated: 2013/12/12 09:11:34 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,6 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 	int		go;
 
 	go = 0;
-#if defined(VERBOSE)
-	ft_putstr("ft_strnstr");
-#endif
 	if ((c = *s2++) != '\0')
 	{
 		len = ft_strlen(s2);

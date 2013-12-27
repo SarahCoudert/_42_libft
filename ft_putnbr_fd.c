@@ -5,16 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/21 14:19:30 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/21 06:32:39 by aaubin           ###   ########.fr       */
+/*   Created: 2013/12/12 08:57:58 by aaubin            #+#    #+#             */
+/*   Updated: 2013/12/12 08:58:15 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char *	value;
+	char	*value;
 
 	value = ft_itoa (n);
 	ft_putstr_fd(value, fd);

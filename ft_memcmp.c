@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/11/21 06:32:12 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/21 06:35:16 by aaubin           ###   ########.fr       */
+/*   Created: 2013/12/12 08:54:16 by aaubin            #+#    #+#             */
+/*   Updated: 2013/12/12 08:54:23 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 	diff = 0;
 	stop = 0;
 	counter = 0;
-	s1_ = (char *)s1;
-	s2_ = (char *)s2;
+	s1_ = (char	*)s1;
+	s2_ = (char	*)s2;
 	while (counter < n && !stop)
 	{
 		diff += (s1_[counter] - s2_[counter]);

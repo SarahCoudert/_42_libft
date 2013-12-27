@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/12/12 08:51:28 by aaubin            #+#    #+#             */
-/*   Updated: 2013/12/12 08:51:35 by aaubin           ###   ########.fr       */
+/*   Created: 2013/11/21 01:27:41 by aaubin            #+#    #+#             */
+/*   Updated: 2013/11/21 01:36:58 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 int		ft_isupper(int c)
 {
+#if defined(VERBOSE)
+	ft_putstr("ft_isupper");
+#endif
 	if (c >= 'A' && c <= 'Z')
 	{
 		return (1);

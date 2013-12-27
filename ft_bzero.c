@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/12/12 08:25:59 by aaubin            #+#    #+#             */
-/*   Updated: 2013/12/12 08:26:26 by aaubin           ###   ########.fr       */
+/*   Created: 2013/11/20 02:48:32 by aaubin            #+#    #+#             */
+/*   Updated: 2013/11/20 03:05:11 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,16 @@ void	ft_bzero(void *s, size_t n)
 {
 	char	*t;
 
-	if (n)
+#if defined(VERBOSE)
+	ft_putstr("ft_bzero\n");
+#endif
+	if ( n )
 	{
 		t = s;
-		while (n)
+		while ( n )
 		{
-			*t++ = 0;
-			n--;
+			*t ++ = 0;
+			n --;
 		}
 	}
 }

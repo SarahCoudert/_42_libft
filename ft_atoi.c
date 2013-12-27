@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/12/12 08:25:53 by aaubin            #+#    #+#             */
-/*   Updated: 2013/12/12 08:25:56 by aaubin           ###   ########.fr       */
+/*   Created: 2013/11/20 23:46:12 by aaubin            #+#    #+#             */
+/*   Updated: 2013/11/21 06:56:35 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char	*str)
+int		ft_atoi(const char *str)
 {
 	unsigned int	digit;
 	unsigned int	go_away;
@@ -35,8 +35,8 @@ int		ft_atoi(const char	*str)
 	while (ft_isdigit (*str) && *str != '\0')
 	{
 		digit = (int) (*str - '0');
-		value = (value	*10) + digit;
+		value = (value * 10) + digit;
 		str++;
 	}
-	return (value	*positive);
+	return (value * positive);
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/12/12 08:55:33 by aaubin            #+#    #+#             */
-/*   Updated: 2013/12/12 08:55:58 by aaubin           ###   ########.fr       */
+/*   Created: 2013/11/19 15:46:55 by aaubin            #+#    #+#             */
+/*   Updated: 2013/11/20 01:16:00 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,19 @@
 
 void*	ft_memset(void *b, int c, size_t len)
 {
-	char *s;
+	char	*s;
 
-	if (len)
+#if defined(VERBOSE)
+	ft_putstr("ft_memset");
+#endif
+	if ( len )
 	{
 		s = b;
-		while (len)
+		while ( len )
 		{
 			*s ++ = c;
 			len --;
 		}
 	}
-	return (b);
+	return ( b );
 }

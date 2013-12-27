@@ -12,24 +12,65 @@
 
 #include "libft.h"
 
-char	*	ft_group_char(char const *s, char c)
+static int	nb_words(char const *s, char c)
 {
-	char	*clone;
-	int		counter;
-	int		c_counter;
+	int	count;
+	int	state;
 
-	if ( s == NULL )
-		return (NULL);
-	counter = 0;
-	c_counter = 0;
-	clone = ft_strnew (ft_strlen(s) + 1);
-	while (s[counter] != '\0')
+	state = OUT;
+	count = 0;
+	while (*s)
 	{
-		clone[c_counter] = s[counter];
-		while(s[counter] == c && s[counter + 1] == c)
-			counter++;
-		counter++;
-		c_counter++;
+		if (state == OUT && *s != c)
+		{
+			state = IN;
+			++count;
+		}
+		if (state == IN && *s == c)
+			state = OUT;
+		++s;
 	}
-	return (clone);
+	return (count);
+}
+
+static void	copy_into_array(char **array, char const *s, char c)
+{
+	int		state;
+	int		beginning_word;
+	int		i;
+
+	state = OUT;
+	i = 0;
+	while (s[i])
+	{
+		if (state == OUT && s[i] != c)
+		{
+			state = IN;
+			beginning_word = i;
+		}
+		if (state == IN && s[i] == c)
+		{
+			state = OUT;
+			*array = ft_strsub(s, beginning_word, i - beginning_word);
+			++array;
+		}
+		++i;
+	}
+	if (state == IN)
+		*array = ft_strsub(s, beginning_word, i - beginning_word);
+}
+
+char		**ft_strsplit(char const *s, char c)
+{
+	char		**ret;
+	int		nb;
+
+	nb = nb_words(s, c) + 1;
+	ret = (char **)malloc(nb * sizeof(char *));
+	if (ret)
+	{
+		copy_into_array(ret, s, c);
+		ret[nb - 1] = 0;
+	}
+	return (ret);
 }

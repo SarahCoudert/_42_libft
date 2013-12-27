@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/12/12 08:27:13 by aaubin            #+#    #+#             */
-/*   Updated: 2013/12/12 08:27:25 by aaubin           ###   ########.fr       */
+/*   Created: 2013/11/21 01:12:17 by aaubin            #+#    #+#             */
+/*   Updated: 2013/11/21 01:35:25 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 int		ft_isalnum(int c)
 {
+
+#if defined(VERBOSE)
+	ft_putstr("ft_isalnum");
+#endif
 	if (ft_isalpha(c) || ft_isdigit(c))
 	{
 		return (1);

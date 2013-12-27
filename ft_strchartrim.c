@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchartrim.c                                   :+:      :+:    :+:   */
+/*   ft_strchartrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/12/12 08:59:45 by aaubin            #+#    #+#             */
-/*   Updated: 2013/12/12 09:00:10 by aaubin           ###   ########.fr       */
+/*   Created: 2013/11/21 14:19:30 by aaubin            #+#    #+#             */
+/*   Updated: 2013/11/21 06:32:39 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchartrim(char const *s, char ch)
+char *	ft_strchartrim(char const *s, char ch)
 {
 	int				d;
 	int				trim_start;
@@ -23,9 +23,9 @@ char	*ft_strchartrim(char const *s, char ch)
 	c = 0;
 	trim_start = 0;
 	new_str = ft_strnew (ft_strlen (s) + 1);
-	while (c < ft_strlen (s))
+	while ( c < ft_strlen (s))
 	{
-		if (!trim_start && s[c] == ch)
+		if ( !trim_start && s[c] == ch)
 			c++;
 		else
 		{

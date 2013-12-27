@@ -5,17 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/12/12 08:57:39 by aaubin            #+#    #+#             */
-/*   Updated: 2013/12/12 08:57:52 by aaubin           ###   ########.fr       */
+/*   Created: 2013/11/21 14:19:30 by aaubin            #+#    #+#             */
+/*   Updated: 2013/11/21 06:32:39 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int n)
+void ft_putnbr(int n)
 {
-	char	*value;
+	char *	value;
 
-	value = ft_itoa(n);
+	value = ft_itoa (n);
 	ft_putstr(value);
 }

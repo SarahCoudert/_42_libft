@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/12/12 09:00:14 by aaubin            #+#    #+#             */
-/*   Updated: 2013/12/12 09:00:37 by aaubin           ###   ########.fr       */
+/*   Created: 2013/11/20 20:31:52 by aaubin            #+#    #+#             */
+/*   Updated: 2013/11/21 06:56:33 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@ char	*ft_strchr(const char *s, int c)
 	char	*found;
 	int		count;
 
+#if defined(VERBOSE)
+	ft_putstr("ft_strchr");
+#endif
 	to_find = c;
 	found = NULL;
 	count = 0;

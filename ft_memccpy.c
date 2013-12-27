@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/12/12 08:53:37 by aaubin            #+#    #+#             */
-/*   Updated: 2013/12/12 08:53:57 by aaubin           ###   ########.fr       */
+/*   Created: 2013/11/21 03:52:22 by aaubin            #+#    #+#             */
+/*   Updated: 2013/11/21 05:43:05 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,17 @@
 
 void	*ft_memccpy(void *s1, const void *s2, int c, size_t n)
 {
-	char		*dp;
-	const char	*sp;
+	char *dp;
+	const char *sp;
 
 	sp = s2;
 	dp = s1;
+#if defined(VERBOSE)
+	ft_putstr("ft_memccpy");
+#endif
 	while (n--)
 	{
-		if (*sp == c)
+		if ( *sp == c )
 		{
 			*dp++ = *sp++;
 			return (dp);

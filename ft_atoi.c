@@ -15,12 +15,10 @@
 int		ft_atoi(const char *str)
 {
 	unsigned int	digit;
-	unsigned int	go_away;
 	int				positive;
 	int				value;
 
 	value = 0;
-	go_away = 0;
 	digit = 0;
 	while ( *str == ' ' || *str == '\t' || *str == '\n' || *str == '\v'
 			|| *str == '\r' || *str == '\f')

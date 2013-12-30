@@ -15,9 +15,7 @@
 void	*ft_realloc(void *ptr, size_t old, size_t size)
 {
 	void		*new;
-	size_t		i;
 
-	i = 0;
 	if (ptr == NULL)
 		return (NULL);
 	if (size == 0)

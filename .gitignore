@@ -7,3 +7,4 @@ LAST
 main_de_test.c
 *.autosave
 *.test.c
+libft.*

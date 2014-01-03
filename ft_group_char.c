@@ -26,7 +26,7 @@ char			*ft_group_char(char const *s, char c)
 	while (s[counter] != '\0')
 	{
 		clone[c_counter] = s[counter];
-		while(s[counter] == c && s[counter + 1] == c)
+		while (s[counter] == c && s[counter + 1] == c)
 			counter++;
 		counter++;
 		c_counter++;

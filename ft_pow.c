@@ -17,7 +17,7 @@ int		ft_pow(int base, int exp)
 	int	result;
 
 	result = 1;
-	while(exp)
+	while (exp)
 	{
 		result *= base;
 		exp--;

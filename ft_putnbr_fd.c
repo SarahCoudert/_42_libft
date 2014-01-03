@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void			ft_putnbr_fd(int n, int fd)
 {
-	char *	value;
+	char		*value;
 
-	value = ft_itoa (n);
+	value = ft_itoa(n);
 	ft_putstr_fd(value, fd);
 }

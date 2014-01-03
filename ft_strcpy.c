@@ -12,19 +12,15 @@
 
 #include "libft.h"
 
-char	*ft_strcpy(char *s1, const char *s2)
+char					*ft_strcpy(char *s1, const char *s2)
 {
 	size_t			len;
-	unsigned int	cmpt;
-	char			*fill;
+	unsigned int		cmpt;
+	char				*fill;
 
-#if defined(VERBOSE)
-	ft_putstr("ft_strcpy");
-#endif
 	cmpt = 0;
 	fill = s1;
 	len = ft_strlen(s2);
-
 	while (cmpt <= len)
 	{
 		fill[cmpt] = s2[cmpt];

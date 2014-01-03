@@ -12,17 +12,14 @@
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *s1, const char *s2, size_t n)
+char			*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	char	c;
-	char	sc;
+	char		c;
+	char		sc;
 	size_t	len;
 	int		go;
 
 	go = 0;
-#if defined(VERBOSE)
-	ft_putstr("ft_strnstr");
-#endif
 	if ((c = *s2++) != '\0')
 	{
 		len = ft_strlen(s2);

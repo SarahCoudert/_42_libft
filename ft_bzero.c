@@ -12,20 +12,17 @@
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void			ft_bzero(void *s, size_t n)
 {
-	char	*t;
+	char		*t;
 
-#if defined(VERBOSE)
-	ft_putstr("ft_bzero\n");
-#endif
-	if ( n )
+	if (n)
 	{
 		t = s;
-		while ( n )
+		while (n)
 		{
-			*t ++ = 0;
-			n --;
+			*t++ = 0;
+			n--;
 		}
 	}
 }

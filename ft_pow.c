@@ -10,11 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
-int	ft_pow(int base, int exp)
+int		ft_pow(int base, int exp)
 {
-	int result = 1;
+	int	result;
+
+	result = 1;
 	while(exp)
 	{
 		result *= base;

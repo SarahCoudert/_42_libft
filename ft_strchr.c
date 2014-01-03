@@ -12,15 +12,12 @@
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char			*ft_strchr(const char *s, int c)
 {
-	char	to_find;
-	char	*found;
+	char		to_find;
+	char		*found;
 	int		count;
 
-#if defined(VERBOSE)
-	ft_putstr("ft_strchr");
-#endif
 	to_find = c;
 	found = NULL;
 	count = 0;

@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static void	ft_inc_counters(char **dest_copy, size_t *counter)
+static void		ft_inc_counters(char **dest_copy, size_t *counter)
 {
 	while (**dest_copy != '\0' && *counter != 0)
 	{
@@ -21,12 +21,12 @@ static void	ft_inc_counters(char **dest_copy, size_t *counter)
 	}
 }
 
-size_t		ft_strlcat(char *dst, const char *src, size_t size)
+size_t			ft_strlcat(char *dst, const char *src, size_t size)
 {
-	char *dest_copy;
-	const char *src_copy;
-	size_t counter;
-	size_t dest_len;
+	char			*dest_copy;
+	const char	*src_copy;
+	size_t		counter;
+	size_t		dest_len;
 
 	dest_copy = dst;
 	src_copy = src;
@@ -49,22 +49,3 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size)
 	*dest_copy = '\0';
 	return ((src_copy - src) + dest_len);
 }
-/*
-int	main()
-{
-	char chaine[20] = "Bonjour ";
-	char chaine_org[20] = "Bonjour ";
-	char chaine_mod[30] = "AndreAubinCeciEstMonNomDeFamE";
-	int c = 3;
-
-	printf("before:  chaine_org = '%s', chaine_mod = '%s', c = '%i'\n", chaine_org, chaine_mod, c);
-	int res_org = strlcat(chaine_org, chaine_mod, c);
-	int res_ft = ft_strlcat(chaine, chaine_mod, c);
-
-	printf("strlcat(%s,%s, %i) => [%i]\n",chaine_org, chaine_mod, c, res_org);
-	printf("ft_strlcat(%s,%s, %i) => [%i]\n",chaine, chaine_mod, c, res_ft);
-
-	printf("end !\n");
-	return 0;
-}
-*/

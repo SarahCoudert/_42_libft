@@ -14,15 +14,8 @@
 
 int		ft_islower(int c)
 {
-#if defined(VERBOSE)
-	ft_putstr("ft_islower");
-#endif
 	if (c >= 'a' && c <= 'z')
-	{
 		return (1);
-	}
 	else
-	{
 		return (0);
-	}
 }

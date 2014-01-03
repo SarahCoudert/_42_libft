@@ -12,21 +12,18 @@
 
 #include "libft.h"
 
-void*	ft_memset(void *b, int c, size_t len)
+void			*ft_memset(void *b, int c, size_t len)
 {
-	char	*s;
+	char		*s;
 
-#if defined(VERBOSE)
-	ft_putstr("ft_memset");
-#endif
-	if ( len )
+	if (len)
 	{
 		s = b;
-		while ( len )
+		while (len)
 		{
-			*s ++ = c;
-			len --;
+			*s++ = c;
+			len--;
 		}
 	}
-	return ( b );
+	return (b);
 }

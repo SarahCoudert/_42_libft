@@ -12,17 +12,14 @@
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+void					*ft_memalloc(size_t size)
 {
-	void			*memory;
-	unsigned int	counter;
-	char			*explorer;
+	void				*memory;
+	unsigned int		counter;
+	char				*explorer;
 
-#if defined(VERBOSE)
-	ft_putstr("ft_memalloc");
-#endif
 	counter = 0;
-	memory = (void *) malloc(size);
+	memory = (void *)malloc(size);
 	explorer = (char *)memory;
 	if (memory != NULL)
 	{

@@ -14,15 +14,8 @@
 
 int		ft_isprint(int c)
 {
-#if defined(VERBOSE)
-	ft_putstr("ft_isprint");
-#endif
 	if (c >= 040 && c <= 0176)
-	{
 		return (1);
-	}
 	else
-	{
 		return (0);
-	}
 }

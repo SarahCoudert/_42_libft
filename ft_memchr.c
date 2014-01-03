@@ -12,24 +12,19 @@
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void				*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned int	counter;
 	char			*found;
 	char			*driver;
 
-#if defined(VERBOSE)
-	ft_putstr("ft_memchr");
-#endif
 	counter = 0;
 	driver = (char *)s;
 	found = NULL;
 	while (found == NULL && counter < n)
 	{
 		if (driver[counter] == c)
-		{
 			found = &(driver[counter]);
-		}
 		counter++;
 	}
 	return (found);

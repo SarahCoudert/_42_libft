@@ -10,16 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
-int	ft_nbrlen(int nombre)
+int		ft_nbrlen(int nombre)
 {
 	int	counter;
 
 	counter = 0;
-	if ( nombre == 0 )
+	if (nombre == 0)
 		return (1);
-	while ( nombre > 0 )
+	while (nombre > 0)
 	{
 		nombre = nombre / 10;
 		counter++;

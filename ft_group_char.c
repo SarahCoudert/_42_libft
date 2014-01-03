@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_group_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,13 +12,13 @@
 
 #include "libft.h"
 
-char	*	ft_group_char(char const *s, char c)
+char			*ft_group_char(char const *s, char c)
 {
-	char	*clone;
+	char		*clone;
 	int		counter;
 	int		c_counter;
 
-	if ( s == NULL )
+	if (s == NULL)
 		return (NULL);
 	counter = 0;
 	c_counter = 0;

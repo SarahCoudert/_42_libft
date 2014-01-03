@@ -11,27 +11,14 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-Description
-	Assigne la valeur ’\0’ à tous les caractères de la chaine passée
-	en paramètre.
-Param.
-	#1 La chaine de caractères à clearer.
-Retour
-	Rien.
-Fonctions
-	libc Aucune.
-*/
-void	ft_strclr(char *s)
+
+void		ft_strclr(char *s)
 {
 	int	length;
 	int	counter;
 
-#if defined(VERBOSE)
-	ft_putstr("ft_strclr");
-#endif
 	counter = 0;
-	length = ft_strlen (s);
+	length = ft_strlen(s);
 	while (counter < length)
 	{
 		*s = '\0';

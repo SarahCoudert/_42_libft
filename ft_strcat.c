@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                       :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -13,21 +13,17 @@
 
 #include "libft.h"
 
-char	*ft_strcat(char *s1, const char *s2)
+char					*ft_strcat(char *s1, const char *s2)
 {
 	size_t			len;
-	unsigned int	offset;
-	unsigned int	cmpt;
-	char			*fill;
+	unsigned int		offset;
+	unsigned int		cmpt;
+	char				*fill;
 
-#if defined(VERBOSE)
-	ft_putstr("ft_strcat");
-#endif
 	offset = ft_strlen(s1);
 	fill = s1;
 	len = ft_strlen(s2);
 	cmpt = 0;
-
 	while (cmpt + offset <= len + offset)
 	{
 		fill[cmpt + offset] = s2[cmpt];

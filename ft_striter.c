@@ -12,30 +12,16 @@
 
 #include "libft.h"
 
-/*
-Description
-	Applique la fonction f à chaque caractère de la chaine de
-	caractères passée en paramètre. Chaque caractère est passé
-	par adresse à la fonction f aﬁn de pouvoir être modiﬁé si
-	nécéssaire.
-Param.
-	#1 La chaine de caractères sur laquelle itérer.
-	#2 La fonction à appeler sur chaque caractère de s.
-Retour
-	Rien.
-Fonctions
-	libc Aucune
-*/
-void	ft_striter(char *s, void (*f)(char *))
+void			ft_striter(char *s, void (*f)(char *))
 {
-	int	len;
-	int	counter;
+	int		len;
+	int		counter;
 
-	if ( s != NULL && f != NULL )
+	if (s != NULL && f != NULL)
 	{
-		len = ft_strlen (s);
+		len = ft_strlen(s);
 		counter = 0;
-		while ( counter < len )
+		while (counter < len)
 		{
 			(*f)(s);
 			s++;

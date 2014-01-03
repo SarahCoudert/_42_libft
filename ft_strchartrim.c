@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchartrim.c                                       :+:      :+:    :+:   */
+/*   ft_strchartrim.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,20 +12,20 @@
 
 #include "libft.h"
 
-char *	ft_strchartrim(char const *s, char ch)
+char					*ft_strchartrim(char const *s, char ch)
 {
 	int				d;
 	int				trim_start;
-	unsigned int	c;
-	char			*new_str;
+	unsigned int		c;
+	char				*new_str;
 
 	d = 0;
 	c = 0;
 	trim_start = 0;
-	new_str = ft_strnew (ft_strlen (s) + 1);
-	while ( c < ft_strlen (s))
+	new_str = ft_strnew(ft_strlen (s) + 1);
+	while (c < ft_strlen (s))
 	{
-		if ( !trim_start && s[c] == ch)
+		if (!trim_start && s[c] == ch)
 			c++;
 		else
 		{

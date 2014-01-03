@@ -6,7 +6,7 @@
 #    By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/20 02:17:09 by aaubin            #+#    #+#              #
-#    Updated: 2013/12/04 00:39:19 by aaubin           ###   ########.fr        #
+#    Updated: 2014/01/03 05:09:54 by aaubin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,7 +77,6 @@ SRC=ft_memset.c\
 	ft_lstmap.c\
 	ft_count_char.c\
 	ft_group_char.c\
-	ft_memrealloc.c\
 	ft_pow.c\
 	ft_nbrlen.c\
 	ft_strchartrim.c\

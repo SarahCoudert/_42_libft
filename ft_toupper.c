@@ -14,15 +14,8 @@
 
 int		ft_toupper(int c)
 {
-#if defined(VERBOSE)
-	ft_putstr("ft_toupper");
-#endif
 	if (ft_islower(c))
-	{
 		return (c - 32);
-	}
 	else
-	{
 		return (c);
-	}
 }

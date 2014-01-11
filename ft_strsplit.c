@@ -63,7 +63,7 @@ static void		copy_into_array(char **array, char const *s, char c)
 char				**ft_strsplit(char const *s, char c)
 {
 	char			**ret;
-	int			nb;
+	int				nb;
 
 	nb = nb_words(s, c) + 1;
 	ret = (char **)malloc(nb * sizeof(char *));

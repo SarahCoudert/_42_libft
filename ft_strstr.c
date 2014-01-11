@@ -16,7 +16,7 @@ char			*ft_strstr(const char *s1, const char *s2)
 {
 	char		*s1_;
 	char		*s2_;
-	int		l;
+	int			l;
 
 	s1_ = (char *)s1;
 	s2_ = (char *)s2;

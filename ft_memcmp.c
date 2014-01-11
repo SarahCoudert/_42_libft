@@ -15,10 +15,10 @@
 int					ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	int				diff;
-	unsigned int		counter;
+	unsigned int	counter;
 	int				stop;
-	char				*s1_;
-	char				*s2_;
+	char			*s1_;
+	char			*s2_;
 
 	diff = 0;
 	stop = 0;

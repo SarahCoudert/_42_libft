@@ -14,7 +14,7 @@
 
 char					*ft_strcpy(char *s1, const char *s2)
 {
-	size_t			len;
+	size_t				len;
 	unsigned int		cmpt;
 	char				*fill;
 

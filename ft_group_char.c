@@ -6,7 +6,7 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/21 14:19:30 by aaubin            #+#    #+#             */
-/*   Updated: 2013/11/21 06:32:39 by aaubin           ###   ########.fr       */
+/*   Updated: 2014/01/11 20:32:32 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char			*ft_group_char(char const *s, char c)
 {
 	char		*clone;
-	int		counter;
-	int		c_counter;
+	int			counter;
+	int			c_counter;
 
 	if (s == NULL)
 		return (NULL);

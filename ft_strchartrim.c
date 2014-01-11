@@ -14,8 +14,8 @@
 
 char					*ft_strchartrim(char const *s, char ch)
 {
-	int				d;
-	int				trim_start;
+	int					d;
+	int					trim_start;
 	unsigned int		c;
 	char				*new_str;
 

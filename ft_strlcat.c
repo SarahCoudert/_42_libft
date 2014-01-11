@@ -23,7 +23,7 @@ static void		ft_inc_counters(char **dest_copy, size_t *counter)
 
 size_t			ft_strlcat(char *dst, const char *src, size_t size)
 {
-	char			*dest_copy;
+	char		*dest_copy;
 	const char	*src_copy;
 	size_t		counter;
 	size_t		dest_len;

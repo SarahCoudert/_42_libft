@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-int			ft_strpos(const char *s1, const char *s2)
+int				ft_strpos(const char *s1, const char *s2)
 {
 	char		*s1_;
 	char		*s2_;
-	int		l;
-	int		counter;
+	int			l;
+	int			counter;
 
 	counter = 0;
 	s1_ = (char *)s1;

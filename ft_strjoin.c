@@ -14,9 +14,9 @@
 
 char			*ft_strjoin(char const *s1, char const *s2)
 {
-	int		len;
-	int		n;
-	int		counter;
+	int			len;
+	int			n;
+	int			counter;
 	char		*final;
 
 	if (s1 == NULL && s2 == NULL)

@@ -16,7 +16,7 @@ char			*ft_strchr(const char *s, int c)
 {
 	char		to_find;
 	char		*found;
-	int		count;
+	int			count;
 
 	to_find = c;
 	found = NULL;

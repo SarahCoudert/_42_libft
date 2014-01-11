@@ -60,10 +60,10 @@ static void		copy_into_array(char **array, char const *s, char c)
 		*array = ft_strsub(s, beginning_word, i - beginning_word);
 }
 
-char				**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
-	char			**ret;
-	int				nb;
+	char		**ret;
+	int			nb;
 
 	nb = nb_words(s, c) + 1;
 	ret = (char **)malloc(nb * sizeof(char *));

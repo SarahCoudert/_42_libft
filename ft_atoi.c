@@ -6,7 +6,7 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/20 23:46:12 by aaubin            #+#    #+#             */
-/*   Updated: 2014/01/11 20:32:14 by aaubin           ###   ########.fr       */
+/*   Updated: 2014/04/23 23:23:34 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int					ft_atoi(const char *str)
 		return (positive == 1 ? -1 : 0);
 	while (ft_isdigit (*str) && *str != '\0')
 	{
-		digit = (int) (*str - '0');
+		digit = (int)(*str - '0');
 		value = (value * 10) + digit;
 		str++;
 	}

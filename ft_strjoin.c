@@ -6,7 +6,7 @@
 /*   By: aaubin <aaubin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/11/21 14:19:30 by aaubin            #+#    #+#             */
-/*   Updated: 2013/12/01 17:47:20 by aaubin           ###   ########.fr       */
+/*   Updated: 2014/04/23 23:25:48 by aaubin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char			*ft_strjoin(char const *s1, char const *s2)
 	char		*final;
 
 	if (s1 == NULL && s2 == NULL)
-		return ((char *) NULL);
+		return ((char *)NULL);
 	if (s1 == NULL && s2)
 		return (ft_strdup(s2));
 	if (s2 == NULL && s1)
